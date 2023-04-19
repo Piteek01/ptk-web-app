@@ -1,0 +1,53 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+// Palette
+$black: #000;
+$white: #fff;
+
+$grays:  (
+  '100': #f8f9fa,
+  '200': #e9ecef,
+  '300': #dee2e6,
+  '400': #ced4da,
+  '500': #adb5bd,
+  '600': #6c757d,
+  '700': #495057,
+  '800': #343a40,
+  '900': #212529
+);
+
+$teals:  (
+  '100': #d2f4ea,
+  '200': #a6e9d5,
+  '300': #79dfc1,
+  '400': #4dd4ac,
+  '500': #20c997,
+  '600': #1aa179,
+  '700': #13795b,
+  '800': #0d503c,
+  '900': #06281e
+);
+
+// Chosen colors
+// $primary: #141414;
+
+$theme-colors:  (
+  'primary':    $primary,
+  'secondary':  $secondary,
+  'success':    $success,
+  'info':       $info,
+  'warning':    $warning,
+  'danger':     $danger,
+  'light':      $light,
+  'dark':       $dark
+);
+
+@function grayColors($key: '500') {
+  @return map-get($grays, $key);
+}
+
+@function tealColors($key: '500') {
+  @return map-get($teals, $key);
+}

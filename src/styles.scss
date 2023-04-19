@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+// @import 'bootstrap/scss/functions';
+// @import 'bootstrap/scss/variables';
+// @import 'bootstrap/scss/mixins';
+// @import 'mixins';
+@import 'bootstrap/scss/bootstrap.scss';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  // font-size: 1.2rem;
+  font-weight: normal;
+  font-display: optional;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+
+  .container-fluid {
+    padding: 0;
+  }
+}
+
+.row {
+  margin: 0;
+}

@@ -1,0 +1,11 @@
+@import 'mixins';
+
+.app-component {
+  .header {
+    // display: flex;
+    // align-items: center;
+    color: $header-color;
+    width: 100%;
+
+  }
+}

@@ -1,0 +1,14 @@
+@import 'palette';
+
+// Body
+$body-color: tealColors('900');
+
+// Gutters
+$small-gutter: 8px;
+$normal-gutter: 16px;
+
+// Header
+$header-background-color: tealColors('800');
+$header-height: 3em;
+$header-color: grayColors('100');
+

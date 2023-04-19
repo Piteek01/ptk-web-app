@@ -1,0 +1,113 @@
+@import 'variables';
+
+// Mixins
+$grid-breakpoints: (
+  xs: 0,
+  ms: 396px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1800px
+);
+
+// Fonts
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.8rem;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 2rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 2.2rem;
+  }
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5rem;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 1.6rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 1.8rem;
+  }
+}
+
+p.extra, h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.3rem;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 1.4rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 1.6rem;
+  }
+}
+
+* {
+  font-size: 1rem;
+  margin: 0;
+  @include media-breakpoint-up(sm) {
+    font-size: 1rem;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 1.1rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 1.2rem;
+  }
+ }
+
+// Headers
+.ptk-header {
+  height: $header-height;
+  padding: 0 $small-gutter;
+  background-color: $header-background-color;
+  @include media-breakpoint-up(lg) {
+    padding: 0 $normal-gutter;
+  }
+}
+
+// Examples
+.custom-class {
+  display: none;
+}
+@include media-breakpoint-up(xl) {
+  .custom-class {
+    margin-top: 60px;
+    display: block;
+  }
+}
+@include media-breakpoint-up(xxxl) {
+  .custom-class {
+    display: none;
+  }
+}
+@include media-breakpoint-between(md, xl) {
+}
+
+@mixin make-container($padding-x: 0) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Usage
+.custom-container {
+  @include make-container();
+}
+
