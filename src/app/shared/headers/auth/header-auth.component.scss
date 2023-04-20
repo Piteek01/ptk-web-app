@@ -1,0 +1,13 @@
+@import 'mixins';
+
+.header-auth {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  .header {
+    // display: flex;
+    // align-items: center;
+    color: $header-color;
+
+  }
+}

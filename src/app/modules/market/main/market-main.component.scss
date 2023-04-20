@@ -1,0 +1,11 @@
+@import 'mixins';
+
+.market-main {
+  width: 100%;
+
+  // @include make-gutters();
+  .contents {
+    margin-top: $header-height;
+    @include make-gutters();
+  }
+}
