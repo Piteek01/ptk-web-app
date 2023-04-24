@@ -1,14 +1,29 @@
 @import 'palette';
 
+// App
+$app-min-width: 275px;
+
 // Body
 $body-color: tealColors('900');
 
 // Gutters
+$xsmall-gutter: 5px;
 $small-gutter: 8px;
 $normal-gutter: 16px;
 
 // Header
 $header-background-color: tealColors('800');
-$header-height: 3em;
 $header-color: grayColors('100');
+$header-height: 3em;
+$header-link: $white;
 
+// Navbar
+$navbarNarrowWidth: 2.8em;
+$navbarWideWidth: 20em;
+
+// Pages
+$page-bk-color: grayColors('200');
+
+// Z-Indexes
+$main-z-index: 101;
+$page-actions-auth: 201;

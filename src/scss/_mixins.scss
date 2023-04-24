@@ -77,12 +77,21 @@ p, h3 {
   }
  }
 
+ @mixin make-small-gutters() {
+  padding: 0 $xsmall-gutter;
+ }
+
 // Headers
-.ptk-header {
+@mixin make-header() {
   height: $header-height;
   @include make-gutters();
   background-color: $header-background-color;
-}
+ }
+// .ptk-header {
+//   height: $header-height;
+//   @include make-gutters();
+//   background-color: $header-background-color;
+// }
 
 // Examples
 .custom-class {

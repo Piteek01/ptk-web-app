@@ -1,0 +1,21 @@
+@import 'mixins';
+
+.page-actions-auth {
+  position: fixed;
+  margin-top: $header-height;
+  height: calc(100vh - #{$header-height});
+  // @include make-small-gutters();
+  // z-index: $page-actions-auth;
+
+  &.wide-width {
+    width: $navbarWideWidth;
+  }
+
+  &.narrow-width {
+    width: $navbarNarrowWidth
+  }
+
+  .icon-expanded {
+    font-size: 1.2em;
+  }
+}

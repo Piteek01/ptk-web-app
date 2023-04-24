@@ -1,7 +1,40 @@
-<div class="header-auth">
-  <header class="row align-items-center ptk-header header">
-    <h1 class="col-4 col-sm-4 col-lg-2 p-0">Header</h1>
-    <div class="d-none d-sm-block col-sm-3 col-lg-6 px-2 text-center">test 1</div>
-    <div class="col-8 col-sm-5 col-lg-4 px-0 text-right"><em>text 2</em></div>
+<nav class="navbar navbar-expand header-auth fixed-top p-0">
+  <header class="container-fluid align-items-center header">
+    <a class="navbar-brand col-auto navbar-a p-0 pr-2 mr-sm-1 mr-lg-3 mb-1" href="#">
+      <img src="../../../../assets/images/logo.svg" alt="PTK" width="30" height="13">
+    </a>
+
+    <!-- <button ngbDropdownToggle type="button" class="navbar-toggler" id="dropdownMenuButton1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse w-100 px-0 justify-content-end" id="navbarCollapse">
+      <ul class="navbar-nav m-0">
+          <li class="nav-item">
+          <a class="nav-link navbar-a active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link navbar-a" aria-current="page" href="#">test 1</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link navbar-a" aria-current="page" href="#"><em>text 2</em></a>
+          </li>
+          <li ngbDropdown class="nav-item dropdown">
+            <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a> -->
+            <a ngbDropdownToggle class="nav-link dropdown-toggle navbar-a" role="button" data-bs-toggle="dropdown" id="dropdownMenuButton1" aria-expanded="false" aria-label="Toggle navigation">
+              Dropdown
+            </a>
+            <div ngbDropdownMenu aria-labelledby="dropdownMenuButton1" class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a href="#"class="dropdown-item">Trash</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+
   </header>
-</div>
+</nav>

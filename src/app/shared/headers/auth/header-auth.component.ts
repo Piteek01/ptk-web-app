@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderAuthComponent implements OnInit {
 
+  constructor(private offCanvasService: NgbOffcanvas) {
+  }
 
 
   // @Input() navPanelClosed!: boolean;
@@ -16,7 +19,10 @@ export class HeaderAuthComponent implements OnInit {
 
 
   ngOnInit() {
-
   }
 
+  openOffCanvas() {
+    const offCanvasRef = this.offCanvasService.open(null);
+    offCanvasRef.componentInstance.data = 'Data';
+  }
 }
