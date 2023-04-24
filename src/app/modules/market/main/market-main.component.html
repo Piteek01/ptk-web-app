@@ -1,9 +1,9 @@
 <section class="container-fluid market-main">
   <app-header-auth></app-header-auth>
-  <!-- <div class="row content-wrapper"> -->
-    <page-actions-auth ></page-actions-auth>
-    <div [ngClass]="['contents', navbarStatus == 1 ? 'wide-width' : 'narrow-width']">
+  <div class="row">
+    <side-nav ></side-nav>
+    <div [ngClass]="['contents', sideNavStatus == 1 ? 'wide-width' : 'narrow-width']">
       Market
     </div>
-  <!-- </div> -->
+  </div>
 </section>

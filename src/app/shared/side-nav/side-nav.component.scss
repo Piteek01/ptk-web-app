@@ -1,6 +1,6 @@
 @import 'mixins';
 
-.page-actions-auth {
+.page-nav {
   position: fixed;
   margin-top: $header-height;
   height: calc(100vh - #{$header-height});

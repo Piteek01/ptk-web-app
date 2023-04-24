@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
-export class NavbarProvider {
-  private _navbarStatus: BehaviorSubject<number> = new BehaviorSubject<number>(1);
+export class SideNavProvider {
+  private _sideNavStatus: BehaviorSubject<number> = new BehaviorSubject<number>(1);
 
   // navbarStatus = this._navbarStatus.asObservable();
   // public get navbarStatus(): number {
@@ -14,12 +14,12 @@ export class NavbarProvider {
   //   this._navbarStatus.next(value);
   // }
 
-  public getNavbarStatus(): Observable<number> {
-    return this._navbarStatus;
+  public getSideNavStatus(): Observable<number> {
+    return this._sideNavStatus;
   }
 
-  public setNavbarStatus(value: number) {
-    this._navbarStatus.next(value);
+  public setSideNavStatus(value: number) {
+    this._sideNavStatus.next(value);
   }
 
 }

@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { NavbarProvider } from 'src/app/core/providers/navbar.provider';
+import { SideNavProvider } from 'src/app/core/providers/side-nav.provider';
 
 @Component({
   selector: 'app-market-main',
   templateUrl: './market-main.component.html',
   styleUrls: ['./market-main.component.scss']
 })
-export class MarketMainComponent implements OnInit {
+export class MarketMainComponent implements OnInit, OnDestroy {
 
-  navbarStatus = 1;
-  navbarSubscription!: Subscription;
+  sideNavStatus = 1;
+  sideNavStatusSubscription!: Subscription;
 
-  constructor(private navbarProvider: NavbarProvider) {
+  constructor(private sideNavProvider: SideNavProvider) {
   }
 
   ngOnInit() {
-    this.navbarSubscription = this.navbarProvider.getNavbarStatus().subscribe(
+    this.sideNavStatusSubscription = this.sideNavProvider.getSideNavStatus().subscribe(
       value => {
-        this.navbarStatus = value;
+        this.sideNavStatus = value;
       }
     );
   }
@@ -32,5 +32,9 @@ export class MarketMainComponent implements OnInit {
   //       this.pageContentsWidth = 'wide-width';
   //   }
   // }
+
+  ngOnDestroy() {
+    this.sideNavStatusSubscription.unsubscribe()
+  }
 
 }

@@ -1,0 +1,12 @@
+<div class="page-nav" [ngClass]="[sideNavStatus == 1 ? 'narrow-width' : 'wide-width']" >
+  <div [ngClass]="['row', sideNavStatus == 2 ? 'justify-content-end' : 'justify-content-start']">
+    <a *ngIf="sideNavStatus == 1" class="btn navbar-a " role="button" (click)="setNavbarWidth()"  aria-controls="Local page actions maximize">
+      <fa-icon [icon]="['fas', 'bars']" class="icon-expanded"></fa-icon>
+    </a>
+
+    <a *ngIf="sideNavStatus == 2" class="btn navbar-a " role="button" (click)="setNavbarWidth()"  aria-controls="Local page action minimize">
+      <fa-icon [icon]="['fas', 'xmark']" class="icon-expanded"></fa-icon>
+    </a>
+  </div>
+
+</div>
