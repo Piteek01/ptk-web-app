@@ -18,4 +18,14 @@
   .icon-expanded {
     font-size: 1.2em;
   }
+
+  .header {
+    @include make-feature-gutters();
+    height: 4em;
+  }
+
+  .features {
+    @include make-feature-gutters();
+    margin-top: 1.5em;
+  }
 }

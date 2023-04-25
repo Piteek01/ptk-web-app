@@ -71,14 +71,26 @@ p, h3 {
  }
 
  @mixin make-gutters() {
-  padding: 0 $small-gutter;
+  padding-right: $small-gutter;
+  padding-left: $small-gutter;
   @include media-breakpoint-up(lg) {
-    padding: 0 $normal-gutter;
+    padding-right: $normal-gutter;
+    padding-left: $normal-gutter;
+  }
+ }
+
+ @mixin make-feature-gutters() {
+  padding-right: $small-gutter;
+  padding-left: $normal-gutter;
+  @include media-breakpoint-up(lg) {
+    padding-right: $normal-gutter;
+    padding-left: $large-gutter;
   }
  }
 
  @mixin make-small-gutters() {
-  padding: 0 $xsmall-gutter;
+  padding-right: $xsmall-gutter;
+  padding-left: $xsmall-gutter;
  }
 
 // Headers

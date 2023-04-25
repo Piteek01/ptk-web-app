@@ -1,5 +1,6 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { IModule } from 'src/app/core/interfaces/imodule.interface';
 // import { NgbActiveOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { SideNavProvider } from 'src/app/core/providers/side-nav.provider';
 
@@ -12,7 +13,8 @@ export class SideNavComponent implements OnInit, OnDestroy {
 
   sideNavStatus = 1;
   sideNavStatusSubscription!: Subscription;
-  @Input() currentModule: string = '';
+
+  @Input() currentModule!: IModule;
 
   constructor(private sideNavProvider: SideNavProvider) {}
 

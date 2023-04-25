@@ -6,14 +6,12 @@
   overflow-x: auto;
   // z-index: $main-z-index;
 
-
-
   .contents {
     // width: 100vw;
     background-color: $page-bk-color;
     height: calc(100vh - #{$header-height});
     margin-top: $header-height;
-
+    padding-top: .4em;
 
     @include make-gutters();
 
