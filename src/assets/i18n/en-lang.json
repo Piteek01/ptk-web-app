@@ -1,0 +1,175 @@
+{
+  "app": {
+    "company": "PITEEK",
+    "company-abbreviation": "PTK",
+    "name": "PITEEK",
+    "purpose": "Commercial collaboration secured through blockchain",
+    "subscription": "Enterprise"
+  },
+  "actions": {
+    "add": "Add",
+    "all": "All",
+    "back": "Back",
+    "cancel": "Cancel",
+    "changePassword": "Change password",
+    "charts": "Charts",
+    "close": "Close",
+    "defaultSettings": "Default Settings",
+    "deselectAll": "Deselect All",
+    "goBack": "Go Back",
+    "greetings": "Hi",
+    "list": "List",
+    "logout": "Logout",
+    "next": "Next",
+    "reset": "Reset",
+    "save": "Save",
+    "search": "Search",
+    "selectAll": "Select All",
+    "submit": "Submit",
+    "vertMore": "More menu options."
+  },
+  "errors": {
+    "generalError": "An error occurred. Please try again later."
+  },
+  "header": {
+    "changePassword": "Change password",
+    "greetings": "Hi",
+    "logout": "Logout",
+    "vertMore": "More menu options."
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "qrCode": "Scan the QR code, or enter the secret key in Google or Microsoft Authenticator.",
+    "securityCode": "Security code",
+    "sk": "Secret Key",
+    "errors": {
+      "loginError": "Username or password is incorrect.",
+      "emailAddressValid": "Enter a valid email address.",
+      "requiredAuthCode": "The security code is required.",
+      "emailAddressRequired": "Your email address is required.",
+      "passwordRequired": "Your password is required."
+    }
+  },
+  "messages": {
+    "editable": "This field is editable.",
+    "errors": {
+      "invalid": "This entry is invalid.",
+      "required": "A value is required."
+    }
+  },
+  "modules": {
+    "all": {
+      "title": "All Modules"
+    },
+    "local": {
+      "account": "Account",
+      "help": "Help",
+      "messages": "Messages",
+      "contacts": "Contacts",
+      "news": "News",
+      "notifications": "Notifications",
+      "posts": "Posts",
+      "settings": "Settings",
+      "stats": "Stats & Members",
+      "users": "Users"
+    },
+    "contacts": {
+      "contacts": "Contacts",
+      "favorites": "Favorites",
+      "inboundShared": "Inbound Shared",
+      "orgs": "Organizations",
+      "outboundShared": "Outbound Shared",
+      "people": "People",
+      "recent": "Recently Viewed",
+      "users": "Users"
+    },
+    "inventory": {
+      "inventory": "Inventory Management",
+      "channels": "Multi-channel Management",
+      "customers": "Customers",
+      "items": "Items",
+      "recent": "Recently Viewed",
+      "suppliers": "Suppliers",
+      "users": "Users",
+      "warehouse": "Warehouse Management"
+    },
+    "market": {
+      "main": "Marketplace"
+    },
+    "purchasing": {
+      "purchasing": "Purchasing",
+      "recent": "Recently Viewed",
+      "requisitions": "Requisitions",
+      "contracts": "Contracts",
+      "templates": "Templates",
+      "orders": "Purchase Orders",
+      "items": "Items",
+      "supplies": "Supplies",
+      "suppliers": "Suppliers",
+      "users": "Users"
+    },
+    "modal": {
+      "button": "Modules"
+    }
+  },
+  "notifications": {
+    "message": {
+      "none": "There are not any additional messages.",
+      "reader": "Message notifications",
+      "title": "Messages"
+    }
+  },
+  "register": {
+
+    "afterAccountVerification1": "After account verification, ",
+    "afterAccountVerification2": " to log in.",
+
+    "givenName": "First name",
+    "goBack": "Back to previous step",
+    "logInLink": "Log in to an existing account",
+
+    "success": "Registration Successful",
+    "successMessage": "Check your email for the account verification request.",
+    "surname": "Last name",
+    "title": "Register",
+    "rootUser": {
+      "account_name": "Account name",
+      "account_nameDescription": "Choose a name for your account. You can change this name in your account settings after you register.",
+      "continueButton": "Continue (step 1 of 4)",
+      "confirmPassword": "Confirm password",
+      "email": "Email",
+      "header": "Registration starts here",
+      "password": "Password"
+    },
+    "rootUserContact": {
+      "city": "City",
+      "continueButton": "Create Account and Continue",
+      "country": "Country of operations",
+      "country_phone": "Country code",
+      "name": "Full name",
+      "header": "Contact Information",
+      "phone_number": "Phone number",
+      "postal_code": "Postal code",
+      "region": "State, province or region",
+      "street1": "Street",
+      "street2": "Street (continued)",
+      "terms_accept": "By checking this box, I confirm that I've read and agreed to the terms and conditions",
+      "termsLink": "found here.",
+      "username": "Username"
+      },
+    "errors": {
+      "emailAddressTaken": "This email address is already taken.",
+      "emailAddressValid": "This email address format is invalid.",
+      "emailRootUserInUse": "This email address is already associated with a root user account.",
+      "fieldRequired": "This field is required.",
+      "passwordMatch": "The passwords do not match",
+      "passwordMaxLength": "The maximum password length is 24 characters.",
+      "passwordRequirements": "Minimum length is 8, with a mix of letters and numbers.",
+      "terms_acceptRequired": "Registration requires acceptance of the terms."
+    }
+  }
+}

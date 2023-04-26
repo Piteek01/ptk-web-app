@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 import { HeaderAuthComponent } from './headers/auth/header-auth.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
@@ -12,7 +14,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
       CommonModule,
       FontAwesomeModule,
       NgbModule,
-      RouterModule
+      RouterModule,
+      TranslateModule
     ],
     declarations: [
       HeaderAuthComponent,
@@ -20,7 +23,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     ],
     exports: [
       HeaderAuthComponent,
-      SideNavComponent
+      SideNavComponent,
+      TranslateModule
     ],
     entryComponents: [],
     providers: []

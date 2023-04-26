@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ptk-web-app';
+
+  constructor(translate: TranslateService) {
+    // this.customIconService.init();
+
+    // translate.addLangs(['en']);
+    translate.setDefaultLang('en');
+
+    const browserLang = translate.getBrowserLang() as string;
+    translate.use(browserLang.match(/en/) ? 'en' : browserLang);
+  }
 }

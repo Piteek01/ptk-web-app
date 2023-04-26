@@ -22,7 +22,7 @@ export class SideNavProvider {
     modules = [
       {
         id: 'market',
-        title: 'module.contacts.contacts',
+        title: 'modules.market.main',
         features: [
           {
             id: '',
