@@ -27,16 +27,6 @@ export class MarketMainComponent implements OnInit, OnDestroy {
     );
   }
 
-  // setPageContentsWidth() {
-  //   switch(this.pageActionsStatus) {
-  //     case 0:
-  //       this.pageContentsWidth = '0';
-  //       break;
-  //     case 1:
-  //       this.pageContentsWidth = 'wide-width';
-  //   }
-  // }
-
   ngOnDestroy() {
     this.sideNavStatusSubscription.unsubscribe()
   }

@@ -21,6 +21,7 @@
     "list": "List",
     "logout": "Logout",
     "next": "Next",
+    "ok": "OK",
     "reset": "Reset",
     "save": "Save",
     "search": "Search",
@@ -65,6 +66,7 @@
     "all": {
       "title": "All Modules"
     },
+    "title": "Modules",
     "local": {
       "account": "Account",
       "help": "Help",
@@ -98,7 +100,9 @@
       "warehouse": "Warehouse Management"
     },
     "market": {
-      "main": "Marketplace"
+      "main": "Marketplace",
+      "feature1": "Feature 1",
+      "feature2": "Feature 2"
     },
     "purchasing": {
       "purchasing": "Purchasing",

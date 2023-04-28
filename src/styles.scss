@@ -34,6 +34,7 @@ body {
   }
 }
 
-.row {
-  margin: 0;
+ngb-modal-backdrop {
+  z-index: 999 !important;
 }
+

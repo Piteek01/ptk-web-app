@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 
-import { IFeature } from '../interfaces/ifeature.interface';
 import { IModule } from '../interfaces/imodule.interface';
 
 @Injectable({ providedIn: 'root' })
@@ -26,14 +25,14 @@ export class SideNavProvider {
         features: [
           {
             id: '',
-            label: 'Feature 1',
+            label: 'modules.market.feature1',
             path: '',
             icon: '',
             features: []
           },
           {
             id: '',
-            label: 'Feature 2',
+            label: 'modules.market.feature2',
             path: '',
             icon: '',
             features: []

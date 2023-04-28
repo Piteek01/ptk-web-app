@@ -1,28 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
-
+import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header-auth',
   templateUrl: './header-auth.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./header-auth.component.scss']
 })
-export class HeaderAuthComponent implements OnInit {
+export class HeaderAuthComponent {
 
-  constructor(private offCanvasService: NgbOffcanvas) {
+  closeResult: string = '';
+
+  constructor(private modalService: NgbModal) {}
+
+  open(content:any) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
   }
 
-
-  // @Input() navPanelClosed!: boolean;
-
-  // @Output() navPanelExpanded: EventEmitter<boolean> = new EventEmitter();
-
-
-  ngOnInit() {
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
   }
 
-  openOffCanvas() {
-    const offCanvasRef = this.offCanvasService.open(null);
-    offCanvasRef.componentInstance.data = 'Data';
-  }
 }

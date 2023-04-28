@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
 
-
 import { HeaderAuthComponent } from './headers/auth/header-auth.component';
+import { ModalModulesComponent } from './modals/modules/modal-modules.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
@@ -19,12 +19,14 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     ],
     declarations: [
       HeaderAuthComponent,
+      ModalModulesComponent,
       SideNavComponent
     ],
     exports: [
+
       HeaderAuthComponent,
-      SideNavComponent,
-      TranslateModule
+      ModalModulesComponent,
+      SideNavComponent
     ],
     entryComponents: [],
     providers: []

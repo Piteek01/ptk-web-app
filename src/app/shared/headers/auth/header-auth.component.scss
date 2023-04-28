@@ -22,4 +22,11 @@
       left: -5rem;
     }
   }
+
+  .btn-modules {
+    color: $white;
+    &:hover {
+      color: $svg-hover-color;
+    }
+  }
 }

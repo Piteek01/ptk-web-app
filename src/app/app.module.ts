@@ -27,7 +27,6 @@ export function httpLoaderFactory(httpClient: HttpClient) {
     // FontAwesomeModule,
     HttpClientModule,
     NgbModule,
-
     SharedModule,
     TranslateModule.forRoot({
       loader: {
