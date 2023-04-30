@@ -4,13 +4,13 @@
       <img src="../../../../assets/images/logo.svg" alt="PTK" width="30" height="13">
     </a>
 
-    <button class="btn btn-modules col-auto p-2 mr-sm-1 mr-lg-3" (click)="open(modalModules)">
+    <button class="btn btn-modules col-auto shadow-none p-2 mr-sm-1 mr-lg-3" (click)="openModal(modalModules)">
       <img src="../../../../assets/images/grid.svg" alt="Modules" width="16" height="16">
       <span class="pl-2 align-middle">{{'modules.title' | translate}}</span>
     </button>
 
     <ng-template #modalModules let-modal>
-      <app-modal-modules [modal]="modal"></app-modal-modules>
+      <app-modal-modules [modal]="modal" [data]="imodules"></app-modal-modules>
     </ng-template>
 
 

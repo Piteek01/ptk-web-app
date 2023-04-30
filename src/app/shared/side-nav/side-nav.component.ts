@@ -2,7 +2,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 // import { NgbActiveOffcanvas } from '@ng-bootstrap/ng-bootstrap';
-import { SideNavProvider } from 'src/app/core/providers/side-nav.provider';
+import { SideNavService } from 'src/app/core/services/side-nav.service';
 
 @Component({
   selector: 'side-nav',
@@ -12,14 +12,14 @@ import { SideNavProvider } from 'src/app/core/providers/side-nav.provider';
 export class SideNavComponent implements OnInit, OnDestroy {
 
   sideNavStatus = 1;
-  sideNavStatusSubscription!: Subscription;
+  sideNavSubscription!: Subscription;
 
   @Input() currentModule!: IModule;
 
-  constructor(private sideNavProvider: SideNavProvider) {}
+  constructor(private sideNavService: SideNavService) {}
 
   ngOnInit() {
-    this.sideNavStatusSubscription = this.sideNavProvider.getSideNavStatus().subscribe(
+    this.sideNavSubscription = this.sideNavService.getSideNavStatus().subscribe(
       value => {
         this.sideNavStatus = value;
       }
@@ -27,11 +27,11 @@ export class SideNavComponent implements OnInit, OnDestroy {
   }
 
   setNavbarWidth() {
-    this.sideNavProvider.setSideNavStatus(this.sideNavStatus === 1 ? 2 : 1);
+    this.sideNavService.setSideNavStatus(this.sideNavStatus === 1 ? 2 : 1);
   }
 
   ngOnDestroy() {
-    this.sideNavStatusSubscription.unsubscribe()
+    this.sideNavSubscription.unsubscribe()
   }
 
 }

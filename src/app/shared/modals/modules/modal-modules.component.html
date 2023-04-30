@@ -6,6 +6,9 @@
 </div>
 <div class="modal-body">
   This is example from ItSolutionStuff.com
+  <div class="imodules" *ngFor="let d of data">
+    {{d.title | translate}}
+  </div>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">

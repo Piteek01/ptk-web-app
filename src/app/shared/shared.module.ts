@@ -23,12 +23,13 @@ import { SideNavComponent } from './side-nav/side-nav.component';
       SideNavComponent
     ],
     exports: [
-
       HeaderAuthComponent,
       ModalModulesComponent,
       SideNavComponent
     ],
-    entryComponents: [],
+    entryComponents: [
+      ModalModulesComponent
+    ],
     providers: []
   })
   export class SharedModule {}

@@ -1,7 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
-import { SideNavProvider } from 'src/app/core/providers/side-nav.provider';
+import { FeaturesProvider } from 'src/app/core/providers/features.provider';
+import { SideNavService } from 'src/app/core/services/side-nav.service';
 
 @Component({
   selector: 'app-market-main',
@@ -15,12 +17,12 @@ export class MarketMainComponent implements OnInit, OnDestroy {
   sideNavStatus = 1;
   sideNavStatusSubscription!: Subscription;
 
-  constructor(private sideNavProvider: SideNavProvider) {
+  constructor(private featuresProvider: FeaturesProvider, private sideNavService: SideNavService) {
   }
 
   ngOnInit() {
-    this.currentModule = this.sideNavProvider.provide(this.moduleId);
-    this.sideNavStatusSubscription = this.sideNavProvider.getSideNavStatus().subscribe(
+    this.currentModule = this.featuresProvider.provide(this.moduleId);
+    this.sideNavStatusSubscription = this.sideNavService.getSideNavStatus().subscribe(
       value => {
         this.sideNavStatus = value;
       }

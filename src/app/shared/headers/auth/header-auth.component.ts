@@ -1,5 +1,7 @@
-import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { IModule } from 'src/app/core/interfaces/imodule.interface';
+import { IModulesProvider } from 'src/app/core/providers/imodules.provider';
 
 @Component({
   selector: 'app-header-auth',
@@ -7,14 +9,21 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./header-auth.component.scss']
 })
-export class HeaderAuthComponent {
+export class HeaderAuthComponent implements OnInit {
 
   closeResult: string = '';
+  imodules: IModule[] = [];
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private imodulesProvider: IModulesProvider, private modalService: NgbModal) {}
 
-  open(content:any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+  ngOnInit() {
+    this.imodules = this.imodulesProvider.provide();
+  }
+
+  openModal(content:any) {
+    this.modalService.open(content,
+      { ariaLabelledBy: 'modal-basic-title', size: 'lg' })
+      .result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;

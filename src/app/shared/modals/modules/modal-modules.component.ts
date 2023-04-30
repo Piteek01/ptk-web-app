@@ -1,4 +1,5 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { IModule } from 'src/app/core/interfaces/imodule.interface';
 
 @Component({
   selector: 'app-modal-modules',
@@ -6,9 +7,13 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./modal-modules.component.scss']
 })
-export class ModalModulesComponent {
+export class ModalModulesComponent implements OnInit {
 
   @Input() modal!: any;
+  @Input() data!: IModule[];
+
+  ngOnInit() {
+  }
 
 
   constructor() {
