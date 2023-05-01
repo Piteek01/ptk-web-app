@@ -1,14 +1,14 @@
 import { RouterModule, Routes } from '@angular/router';
-import { MarketMainComponent } from './main/market-main.component';
+import { DashboardMainComponent } from './main/dashboard-main.component';
 
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
     path: '',
-    // redirectTo: 'market',
+    // redirectTo: 'dashboard',
     pathMatch: 'full',
-    component: MarketMainComponent
+    component: DashboardMainComponent
   },
   {
     path: '**',
@@ -20,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MarketRoutingModule {}
+export class DashboardRoutingModule {}

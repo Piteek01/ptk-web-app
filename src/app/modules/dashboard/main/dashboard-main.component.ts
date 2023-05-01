@@ -6,14 +6,14 @@ import { FeaturesProvider } from 'src/app/core/providers/features.provider';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
 
 @Component({
-  selector: 'app-market-main',
-  templateUrl: './market-main.component.html',
-  styleUrls: ['./market-main.component.scss']
+  selector: 'app-dashboard-main',
+  templateUrl: './dashboard-main.component.html',
+  styleUrls: ['./dashboard-main.component.scss']
 })
-export class MarketMainComponent implements OnInit, OnDestroy {
+export class DashboardMainComponent implements OnInit, OnDestroy {
 
   currentModule!: IModule;
-  moduleId = 'market';
+  moduleId = 'dashboard';
   sideNavStatus = 1;
   sideNavStatusSubscription!: Subscription;
 

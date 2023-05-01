@@ -1,9 +1,9 @@
 {
   "app": {
-    "company": "PITEEK",
-    "company-abbreviation": "PTK",
-    "name": "PITEEK",
-    "purpose": "Commercial collaboration secured through blockchain",
+    "company": "StratusMX",
+    "company-abbreviation": "SMX",
+    "name": "StratusMX",
+    "purpose": "Regulatory compliance through AI and digitized maintenance",
     "subscription": "Enterprise"
   },
   "actions": {
@@ -66,8 +66,8 @@
     "all": {
       "title": "All Modules"
     },
-    "aircraft": {
-      "main": "Aircraft"
+    "assets": {
+      "main": "Assets"
     },
     "control": {
       "main": "Control"
@@ -75,7 +75,6 @@
     "crews": {
       "main": "Crews"
     },
-
     "local": {
       "account": "Account",
       "help": "Help",
@@ -101,8 +100,13 @@
       "recent": "Recently Viewed",
       "users": "Users"
     },
-    "inventory": {
-      "main": "Inventory",
+    "dashboard": {
+      "main": "Dashboard",
+      "feature1": "Feature 1",
+      "feature2": "Feature 2"
+    },
+    "parts": {
+      "main": "Parts & Supplies",
       "channels": "Multi-channel Management",
       "customers": "Customers",
       "items": "Items",
@@ -110,11 +114,6 @@
       "suppliers": "Suppliers",
       "users": "Users",
       "warehouse": "Warehouse Management"
-    },
-    "market": {
-      "main": "Marketplace",
-      "feature1": "Feature 1",
-      "feature2": "Feature 2"
     },
     "purchasing": {
       "main": "Purchasing",
@@ -133,6 +132,9 @@
     },
     "regulations": {
       "main": "Regulations"
+    },
+    "staff": {
+      "main": "Staff"
     },
     "title": "Modules"
   },

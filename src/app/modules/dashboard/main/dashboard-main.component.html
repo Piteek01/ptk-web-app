@@ -1,9 +1,9 @@
-<section class="container-fluid market-main">
+<section class="container-fluid dashboard-main">
   <app-header-auth></app-header-auth>
   <div class="row">
     <side-nav [currentModule]="currentModule" ></side-nav>
     <div [ngClass]="['contents', sideNavStatus == 1 ? 'wide-width' : 'narrow-width']">
-      Market
+      Dashboard
     </div>
   </div>
 </section>

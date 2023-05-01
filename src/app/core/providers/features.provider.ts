@@ -10,19 +10,19 @@ export class FeaturesProvider {
 
     modules = [
       {
-        id: 'market',
-        title: 'modules.market.main',
+        id: 'dashboard',
+        title: 'modules.dashboard.main',
         features: [
           {
             id: '',
-            label: 'modules.market.feature1',
+            label: 'modules.dashboard.feature1',
             path: '',
             icon: '',
             features: []
           },
           {
             id: '',
-            label: 'modules.market.feature2',
+            label: 'modules.dashboard.feature2',
             path: '',
             icon: '',
             features: []

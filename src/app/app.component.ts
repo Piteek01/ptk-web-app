@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ptk-web-app';
+  title = 'smx-web-app';
 
   constructor(translate: TranslateService) {
     // this.customIconService.init();

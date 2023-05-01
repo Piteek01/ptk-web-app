@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ptk-web-app'`, () => {
+  it(`should have as title 'smx-web-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ptk-web-app');
+    expect(app.title).toEqual('smx-web-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ptk-web-app app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('smx-web-app app is running!');
   });
 });

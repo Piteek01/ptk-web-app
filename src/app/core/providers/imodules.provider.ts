@@ -10,16 +10,16 @@ export class IModulesProvider {
 
     modules = [
       {
-        id: 'market',
-        title: 'modules.market.main'
+        id: 'dashboard',
+        title: 'modules.dashboard.main'
       },
       {
-        id: 'aircraft',
-        title: 'modules.aircraft.main'
+        id: 'assets',
+        title: 'modules.assets.main'
       },
       {
-        id: 'crews',
-        title: 'modules.crews.main'
+        id: 'staff',
+        title: 'modules.staff.main'
       },
       {
         id: 'locations',
@@ -38,8 +38,8 @@ export class IModulesProvider {
         title: 'modules.receiving.main'
       },
       {
-        id: 'inventory',
-        title: 'modules.inventory.main'
+        id: 'parts',
+        title: 'modules.parts.main'
       },
       {
         id: 'control',

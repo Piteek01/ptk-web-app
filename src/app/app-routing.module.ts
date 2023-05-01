@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'market',
+    path: 'dashboard',
     loadChildren: () =>
-      import('./modules/market/market.module').then((m) => m.MarketModule)
+      import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
   // {
   //   path: 'ma',
@@ -14,7 +14,7 @@ const routes: Routes = [
   // },
   {
     path: '**',
-    redirectTo: 'market'
+    redirectTo: 'dashboard'
   },
 ];
 
