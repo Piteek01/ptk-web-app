@@ -7,7 +7,7 @@
 
   <div *ngIf="sideNavStatus == 2">
     <header class="header d-flex justify-content-between align-items-center">
-      <h2>{{ currentModule.title | translate }}</h2>
+      <h2>{{ _currentModule.title | translate }}</h2>
 
       <a class="btn navbar-a " role="button" (click)="setNavbarWidth()"  aria-controls="Local page action minimize">
         <fa-icon [icon]="['fas', 'x']" class="icon-expanded"></fa-icon>

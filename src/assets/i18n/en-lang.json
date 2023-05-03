@@ -102,8 +102,11 @@
     },
     "dashboard": {
       "main": "Dashboard",
-      "feature1": "Feature 1",
-      "feature2": "Feature 2"
+      "regulations": "New Regulations",
+      "staffing": "New Staff Members"
+    },
+    "operators": {
+      "main": "Operators"
     },
     "parts": {
       "main": "Parts & Supplies",
@@ -134,7 +137,7 @@
       "main": "Regulations"
     },
     "staff": {
-      "main": "Staff"
+      "main": "Maintenance Staff"
     },
     "title": "Modules"
   },

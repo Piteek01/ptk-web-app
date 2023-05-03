@@ -5,7 +5,7 @@ import { IModule } from 'src/app/core/interfaces/imodule.interface';
   selector: 'app-modal-modules',
   templateUrl: './modal-modules.component.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./modal-modules.component.scss']
+  styleUrls: ['../modals.component.scss']
 })
 export class ModalModulesComponent implements OnInit {
 

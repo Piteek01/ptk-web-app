@@ -1,17 +1,18 @@
-<div class="modal-header align-items-center modal-modules">
-  <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
-  <button type="button" class="btn shadow-none" aria-label="Close" (click)="modal.dismiss('Cross click')" >
-    <fa-icon [icon]="['fas', 'x']" class="icon-expanded"></fa-icon>
-  </button>
-</div>
-<div class="modal-body">
-  This is example from ItSolutionStuff.com
-  <div class="imodules" *ngFor="let d of data">
-    {{d.title | translate}}
+<div class="modal-modules">
+  <div class="modal-header align-items-center">
+    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+    <button type="button" class="btn shadow-none" aria-label="Close" (click)="modal.dismiss('Cross click')" >
+      <fa-icon [icon]="['fas', 'x']" class="icon-expanded"></fa-icon>
+    </button>
   </div>
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">
-    {{ 'actions.ok' | translate }}
-  </button>
+  <div class="modal-body row mx-0 px-0">
+    <h3 class="imodules col-6 mt-4 mb-4" *ngFor="let d of data">
+      {{d.title | translate}}
+    </h3>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">
+      {{ 'actions.ok' | translate }}
+    </button>
+  </div>
 </div>

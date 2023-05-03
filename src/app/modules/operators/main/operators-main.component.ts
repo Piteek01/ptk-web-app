@@ -6,11 +6,11 @@ import { FeaturesProvider } from 'src/app/core/providers/features.provider';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
 
 @Component({
-  selector: 'app-dashboard-main',
-  templateUrl: './dashboard-main.component.html',
-  styleUrls: ['./dashboard-main.component.scss']
+  selector: 'app-operators-main',
+  templateUrl: './operators-main.component.html',
+  styleUrls: ['./operators-main.component.scss']
 })
-export class DashboardMainComponent implements OnInit, OnDestroy {
+export class OperatorsMainComponent implements OnInit, OnDestroy {
 
   currentModule!: IModule;
   moduleId = 'dashboard';
@@ -18,10 +18,6 @@ export class DashboardMainComponent implements OnInit, OnDestroy {
   sideNavStatusSubscription!: Subscription;
 
   constructor(private featuresProvider: FeaturesProvider, private sideNavService: SideNavService) {
-    // this.sideNavService.getSideNavStatus().subscribe(
-    //   value => {
-    //     this.sideNavStatus = value;
-    //   });
   }
 
   ngOnInit() {

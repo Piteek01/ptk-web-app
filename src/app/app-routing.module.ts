@@ -7,11 +7,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
-  // {
-  //   path: 'ma',
-  //   loadChildren: () =>
-  //     import('./modules/myaccount/myaccount.module').then((m) => m.MyAccountModule)
-  // },
+  {
+    path: 'operators',
+    loadChildren: () =>
+      import('./modules/operators/operators.module').then((m) => m.OperatorsModule)
+  },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
+  },
   {
     path: '**',
     redirectTo: 'dashboard'

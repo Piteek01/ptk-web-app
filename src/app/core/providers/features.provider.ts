@@ -15,14 +15,14 @@ export class FeaturesProvider {
         features: [
           {
             id: '',
-            label: 'modules.dashboard.feature1',
+            label: 'modules.dashboard.regulations',
             path: '',
             icon: '',
             features: []
           },
           {
             id: '',
-            label: 'modules.dashboard.feature2',
+            label: 'modules.dashboard.staffing',
             path: '',
             icon: '',
             features: []

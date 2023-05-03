@@ -5,9 +5,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class SideNavService {
   private _sideNavStatus: BehaviorSubject<number> = new BehaviorSubject<number>(1);
 
-  public getSideNavStatus(): Observable<number> {
-    return this._sideNavStatus;
-  }
+  sideNavStatus = this._sideNavStatus.asObservable();
+
+  // public getSideNavStatus(): Observable<number> {
+  //   return this._sideNavStatus;
+  // }
 
   public setSideNavStatus(value: number) {
     this._sideNavStatus.next(value);

@@ -14,6 +14,10 @@ export class IModulesProvider {
         title: 'modules.dashboard.main'
       },
       {
+        id: 'operators',
+        title: 'modules.operators.main'
+      },
+      {
         id: 'assets',
         title: 'modules.assets.main'
       },
@@ -22,12 +26,12 @@ export class IModulesProvider {
         title: 'modules.staff.main'
       },
       {
-        id: 'locations',
-        title: 'modules.locations.main'
+        id: 'regulations',
+        title: 'modules.regulations.main'
       },
       {
-        id: 'regulations',
-        title: 'modules.receiving.main'
+        id: 'locations',
+        title: 'modules.locations.main'
       },
       {
         id: 'puchasing',
