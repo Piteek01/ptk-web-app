@@ -17,12 +17,7 @@ export class DashboardMainComponent implements OnInit, OnDestroy {
   sideNavStatus = 1;
   sideNavStatusSubscription!: Subscription;
 
-  constructor(private featuresProvider: FeaturesProvider, private sideNavService: SideNavService) {
-    // this.sideNavService.getSideNavStatus().subscribe(
-    //   value => {
-    //     this.sideNavStatus = value;
-    //   });
-  }
+  constructor(private featuresProvider: FeaturesProvider, private sideNavService: SideNavService) { }
 
   ngOnInit() {
     this.currentModule = this.featuresProvider.provide(this.moduleId);

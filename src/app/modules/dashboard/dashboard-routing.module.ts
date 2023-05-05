@@ -5,6 +5,11 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
+    path: 'regulations',
+    pathMatch: 'full',
+    component: DashboardMainComponent
+  },
+  {
     path: '',
     // redirectTo: 'dashboard',
     pathMatch: 'full',
@@ -12,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'dashboard'
   }
 ];
 

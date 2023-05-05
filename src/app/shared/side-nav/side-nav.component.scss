@@ -27,5 +27,9 @@
   .features {
     @include make-feature-gutters();
     margin-top: 1.5em;
+
+    &.active {
+      color: red;
+    }
   }
 }

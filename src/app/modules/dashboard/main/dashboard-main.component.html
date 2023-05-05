@@ -3,7 +3,7 @@
   <div class="row">
     <app-side-nav [currentModule]="currentModule" (voted)="onVoted($event)" ></app-side-nav>
     <div [ngClass]="['contents', sideNavStatus == 1 ? 'wide-width' : 'narrow-width']">
-      Dashboard
+      {{'modules.dashboard.main' | translate}}
     </div>
   </div>
 </section>

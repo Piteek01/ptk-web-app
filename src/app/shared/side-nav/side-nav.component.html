@@ -14,10 +14,10 @@
       </a>
     </header>
     <hr />
-
-    <div class="features" *ngFor="let f of currentModule.features">
+    <div *ngFor="let f of currentModule.features" [ngClass]="{features: true, active: f.path === currentRoute}">
       {{f.label | translate}}
     </div>
+
   </div>
 
 </div>

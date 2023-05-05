@@ -1,5 +1,8 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Location } from '@angular/common';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { filter, startWith, tap } from 'rxjs/operators';
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 // import { NgbActiveOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
@@ -12,6 +15,8 @@ import { SideNavService } from 'src/app/core/services/side-nav.service';
 export class SideNavComponent implements OnInit, OnDestroy {
 
   _currentModule!: IModule;
+  currentRoute: string = '';
+  isActiveFeature: boolean = false;
   sideNavStatus = 1;
   sideNavSubscription!: Subscription;
 
@@ -26,7 +31,23 @@ export class SideNavComponent implements OnInit, OnDestroy {
 
   @Output() voted = new EventEmitter<boolean>();
 
-  constructor(private sideNavService: SideNavService) {}
+  constructor(private sideNavService: SideNavService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router) {
+      // this.router.events.subscribe(() => {
+      // this.isActiveFeature = this.location.path().substring(1, this.location.path().indexOf('/', 1) === -1 ?
+      //   this.location.path().length : this.location.path().indexOf('/', 1));
+      // });
+      // this.router.events.pipe(
+      //   filter(e => e instanceof NavigationEnd),
+      //   startWith(this.router)).
+      //   subscribe((event: any) => {
+      //     const routes = event.url.toLowerCase().split('/');
+      //     const currentRoute = routes[1];
+      //     console.log(event.url);
+      //     })
+    }
+
 
   // ngOnChanges(changes: SimpleChanges) {
   //   const log: string[] = [];
@@ -49,7 +70,16 @@ export class SideNavComponent implements OnInit, OnDestroy {
         this.sideNavStatus = value;
       }
     );
+
+    this.currentRoute = this.activatedRoute.snapshot.url.length ?
+      this.activatedRoute.snapshot.url[0].path : '/';
   }
+
+  // isLinkActive(path: string): boolean {
+  //   // console.log(this.sideNavStatus);
+  //   // console.log(this._currentModule && this.currentModule?.features && this.currentModule?.features?.length);
+  //   return path === this.currentRoute;
+  // }
 
   setNavbarWidth() {
     this.sideNavService.setSideNavStatus(this.sideNavStatus === 1 ? 2 : 1);
