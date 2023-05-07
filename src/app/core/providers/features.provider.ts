@@ -12,6 +12,7 @@ export class FeaturesProvider {
       {
         id: 'dashboard',
         title: 'modules.dashboard.main',
+        path: '/',
         features: [
           {
             id: '',

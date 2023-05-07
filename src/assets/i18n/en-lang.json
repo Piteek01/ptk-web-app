@@ -63,9 +63,6 @@
     }
   },
   "modules": {
-    "all": {
-      "title": "All Modules"
-    },
     "assets": {
       "main": "Assets"
     },

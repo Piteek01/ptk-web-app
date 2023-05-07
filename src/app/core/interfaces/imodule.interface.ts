@@ -3,6 +3,6 @@ import { IFeature } from './ifeature.interface';
 export interface IModule {
   id?: string;
   title: string;
-  url?: string;
+  path?: string;
   features?: IFeature[];
 }

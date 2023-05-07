@@ -4,7 +4,11 @@
 
   .modal-header {
     background-color: $header-modal;
+    color: $header-color;
   }
 
+  .icon-color {
+   color: $header-color;
+  }
 
 }

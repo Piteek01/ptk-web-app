@@ -3,19 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () =>
+      import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
+  },
+  {
     path: 'dashboard',
     loadChildren: () =>
       import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
   {
     path: 'operators',
-    loadChildren: () =>
-      import('./modules/operators/operators.module').then((m) => m.OperatorsModule)
-  },
-  {
-    path: '',
-    loadChildren: () =>
-      import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
+    loadComponent: () => import('./modules/operators/main/operators-main.component')
+      .then(m => m.OperatorsMainComponent)
   },
   {
     path: '**',

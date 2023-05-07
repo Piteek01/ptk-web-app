@@ -38,9 +38,7 @@ export function httpLoaderFactory(httpClient: HttpClient) {
     }),
     AppRoutingModule
   ],
-  providers: [
-
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

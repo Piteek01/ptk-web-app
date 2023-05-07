@@ -8,13 +8,13 @@ const routes: Routes = [
     path: 'dashboard',
     // redirectTo: 'dashboard',
     pathMatch: 'full',
-    component: OperatorsMainComponent
+    // component: OperatorsMainComponent
   },
   {
     path: '',
     // redirectTo: 'dashboard',
     pathMatch: 'full',
-    component: OperatorsMainComponent
+    // component: OperatorsMainComponent
   },
   {
     path: '**',
