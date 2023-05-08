@@ -29,6 +29,27 @@ export class FeaturesProvider {
             features: []
           }
         ]
+      },
+      {
+        id: 'operators',
+        title: 'modules.operators.main',
+        path: '/operators',
+        features: [
+          {
+            id: '',
+            label: 'modules.operators.edit',
+            path: '/operators/edit',
+            icon: '',
+            features: []
+          },
+          {
+            id: '',
+            label: 'modules.dashboard.staffing',
+            path: 'staffing',
+            icon: '',
+            features: []
+          }
+        ]
       }
     ];
 

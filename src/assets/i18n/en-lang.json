@@ -103,7 +103,8 @@
       "staffing": "New Staff Members"
     },
     "operators": {
-      "main": "Operators"
+      "main": "Operators",
+      "edit": "Edit"
     },
     "parts": {
       "main": "Parts & Supplies",

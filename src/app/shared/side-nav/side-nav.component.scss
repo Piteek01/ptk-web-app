@@ -27,6 +27,10 @@
   .features {
     @include make-feature-gutters();
     margin-top: 1.5em;
+
+  }
+
+  a {
     color: $link-color;
     display: inline-block;
 
@@ -34,6 +38,7 @@
       @include for-active-link();
     }
   }
+
 
 
 }

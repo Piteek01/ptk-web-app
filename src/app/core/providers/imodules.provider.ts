@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { IModule } from '../interfaces/imodule.interface';
+import { IModulesEnum } from '../enums/imodules.enum';
 
 @Injectable({ providedIn: 'root' })
 export class IModulesProvider {
@@ -10,45 +11,45 @@ export class IModulesProvider {
 
     modules = [
       {
-        id: 'dashboard',
+        id: IModulesEnum.dashboard,
         title: 'modules.dashboard.main',
-        path: '/dashboard'
+        path: '/'
       },
       {
-        id: 'operators',
+        id: IModulesEnum.operators,
         title: 'modules.operators.main',
         path: '/operators'
       },
       {
-        id: 'assets',
+        id: IModulesEnum.assets,
         title: 'modules.assets.main'
       },
       {
-        id: 'staff',
+        id: IModulesEnum.staff,
         title: 'modules.staff.main'
       },
       {
-        id: 'regulations',
+        id: IModulesEnum.regulations,
         title: 'modules.regulations.main'
       },
       {
-        id: 'locations',
+        id: IModulesEnum.locations,
         title: 'modules.locations.main'
       },
       {
-        id: 'puchasing',
+        id: IModulesEnum.purchasing,
         title: 'modules.purchasing.main'
       },
       {
-        id: 'receiving',
+        id: IModulesEnum.receiving,
         title: 'modules.receiving.main'
       },
       {
-        id: 'parts',
+        id: IModulesEnum.parts,
         title: 'modules.parts.main'
       },
       {
-        id: 'control',
+        id: IModulesEnum.control,
         title: 'modules.control.main'
       }
     ];

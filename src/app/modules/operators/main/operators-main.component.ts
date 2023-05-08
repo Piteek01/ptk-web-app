@@ -23,7 +23,7 @@ import { HeaderAuthComponent } from 'src/app/shared/headers/auth/header-auth.com
 export class OperatorsMainComponent implements OnInit, OnDestroy {
 
   currentModule!: IModule;
-  moduleId = 'dashboard';
+  moduleId = 'operators';
   sideNavStatus = 1;
   sideNavStatusSubscription!: Subscription;
 

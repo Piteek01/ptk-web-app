@@ -1,14 +1,12 @@
 /// <reference types="@angular/localize" />
 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
 import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { withInterceptorsFromDi, provideHttpClient, HttpClient } from '@angular/common/http';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { routes } from './app/app-routing';
+import { routes } from './app/app-routes';
 import { provideRouter } from '@angular/router';
 
 import { AppComponent } from './app/app.component';

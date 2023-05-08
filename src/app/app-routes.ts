@@ -1,4 +1,3 @@
-import { NgModule } from '@angular/core';
 import { Route } from '@angular/router';
 
 export const routes: Route[] = [
@@ -9,13 +8,12 @@ export const routes: Route[] = [
   },
   {
     path: 'operators',
-    loadChildren: () => import('./modules/operators/operators-routing.component')
+    loadChildren: () => import('./modules/operators/operators-routes.component')
       .then(m => m.OPERATORS_ROUTING)
   },
   {
     path: '',
-    loadComponent: () => import('./modules/dashboard/main/dashboard-main.component')
-      .then(m => m.DashboardMainComponent)
+    redirectTo: 'dashboard', pathMatch: 'full'
   },
   {
     path: '**',
