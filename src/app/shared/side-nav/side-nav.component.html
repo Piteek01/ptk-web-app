@@ -14,9 +14,15 @@
       </a>
     </header>
     <hr />
-    <div *ngFor="let f of currentModule.features" [ngClass]="{features: true, 'active-link': f.path === currentRoute}">
-      {{f.label | translate}}
-    </div>
+    <ul class="nav flex-column">
+      <li *ngFor="let f of currentModule.features" class="nav-item">
+        <a [routerLink]="f.path" [ngClass]="{features: true}"
+          routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+          {{f.label | translate}}
+        </a>
+      </li>
+    </ul>
+
 
   </div>
 

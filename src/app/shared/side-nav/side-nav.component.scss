@@ -27,9 +27,13 @@
   .features {
     @include make-feature-gutters();
     margin-top: 1.5em;
+    color: $link-color;
+    display: inline-block;
+
+    &.active-link {
+      @include for-active-link();
+    }
   }
 
-  .active-link {
-    color: $active-link-color;
-  }
+
 }
