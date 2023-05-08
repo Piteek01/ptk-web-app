@@ -20,7 +20,9 @@ $header-link: $white;
 $header-modal: grayColors('800');
 
 // Links
-$active-link-color: tealColors('600');
+$link-color: tealColors('600');
+$active-link-color: tealColors('800');
+$active-link-weight: 700;
 
 // Navbar
 $navbarNarrowWidth: 2.8em;

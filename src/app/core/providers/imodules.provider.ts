@@ -11,11 +11,13 @@ export class IModulesProvider {
     modules = [
       {
         id: 'dashboard',
-        title: 'modules.dashboard.main'
+        title: 'modules.dashboard.main',
+        path: '/dashboard'
       },
       {
         id: 'operators',
-        title: 'modules.operators.main'
+        title: 'modules.operators.main',
+        path: '/operators'
       },
       {
         id: 'assets',
