@@ -10,13 +10,11 @@ describe('DashboardMainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        FeaturesProvider, SideNavService
-      ],
-      declarations: [
+    imports: [
+        FeaturesProvider, SideNavService,
         DashboardMainComponent
-      ],
-    }).compileComponents();
+    ]
+}).compileComponents();
   });
 
   it('should create the component', () => {

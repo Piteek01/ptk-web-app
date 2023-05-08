@@ -1,16 +1,20 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { Location } from '@angular/common';
+import { Location, NgClass, NgIf, NgFor } from '@angular/common';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter, startWith, tap } from 'rxjs/operators';
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 // import { NgbActiveOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
-  selector: 'app-side-nav',
-  templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.scss']
+    selector: 'app-side-nav',
+    templateUrl: './side-nav.component.html',
+    styleUrls: ['./side-nav.component.scss'],
+    standalone: true,
+    imports: [NgClass, NgIf, FontAwesomeModule, NgFor, TranslateModule]
 })
 export class SideNavComponent implements OnInit, OnDestroy {
 

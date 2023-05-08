@@ -5,16 +5,18 @@ import { Subscription } from 'rxjs';
 import { TranslateModule } from '@ngx-translate/core';
 
 // import { OperatorsRoutingModule } from './operators-routing.module';
-import { SharedModule } from '../../../shared/shared.module';
+
 
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { FeaturesProvider } from 'src/app/core/providers/features.provider';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
+import { SideNavComponent } from 'src/app/shared/side-nav/side-nav.component';
+import { HeaderAuthComponent } from 'src/app/shared/headers/auth/header-auth.component';
 
 @Component({
   selector: 'app-operators-main',
   standalone: true,
-  imports: [CommonModule, SharedModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, HeaderAuthComponent, SideNavComponent],
   templateUrl: './operators-main.component.html',
   styleUrls: ['./operators-main.component.scss']
 })

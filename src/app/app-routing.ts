@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Route } from '@angular/router';
 
-const routes: Routes = [
+export const routes: Route[] = [
   {
     path: 'dashboard',
     loadComponent: () => import('./modules/dashboard/main/dashboard-main.component')
@@ -22,9 +22,3 @@ const routes: Routes = [
     redirectTo: 'dashboard'
   },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

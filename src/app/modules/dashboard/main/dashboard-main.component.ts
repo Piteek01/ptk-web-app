@@ -3,15 +3,21 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-import { SharedModule } from '../../../shared/shared.module';
+
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { FeaturesProvider } from 'src/app/core/providers/features.provider';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
+import { SideNavComponent } from 'src/app/shared/side-nav/side-nav.component';
+import { HeaderAuthComponent } from 'src/app/shared/headers/auth/header-auth.component';
 
 @Component({
   selector: 'app-dashboard-main',
   standalone: true,
-  imports: [CommonModule, SharedModule, TranslateModule],
+  imports: [
+    CommonModule, TranslateModule,
+    HeaderAuthComponent,
+    SideNavComponent
+  ],
   templateUrl: './dashboard-main.component.html',
   styleUrls: ['./dashboard-main.component.scss']
 })

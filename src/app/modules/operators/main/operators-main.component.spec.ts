@@ -10,13 +10,11 @@ describe('OperatorsMainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        FeaturesProvider, SideNavService
-      ],
-      declarations: [
+    imports: [
+        FeaturesProvider, SideNavService,
         OperatorsMainComponent
-      ],
-    }).compileComponents();
+    ]
+}).compileComponents();
   });
 
   it('should create the component', () => {

@@ -1,13 +1,17 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalDismissReasons, NgbModal, NgbNavbar, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu } from '@ng-bootstrap/ng-bootstrap';
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { IModulesProvider } from 'src/app/core/providers/imodules.provider';
+import { TranslateModule } from '@ngx-translate/core';
+import { ModalModulesComponent } from '../../modals/modules/modal-modules.component';
 
 @Component({
-  selector: 'app-header-auth',
-  templateUrl: './header-auth.component.html',
-  encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./header-auth.component.scss']
+    selector: 'app-header-auth',
+    templateUrl: './header-auth.component.html',
+    encapsulation: ViewEncapsulation.None,
+    styleUrls: ['./header-auth.component.scss'],
+    standalone: true,
+    imports: [NgbNavbar, ModalModulesComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, TranslateModule]
 })
 export class HeaderAuthComponent implements OnInit {
 
