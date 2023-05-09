@@ -1,8 +1,8 @@
-import { IFeature } from './ifeature.interface';
+import { Feature } from './feature.interface';
 
 export interface IModule {
   id?: string;
   title: string;
   path?: string;
-  features?: IFeature[];
+  features?: Feature[];
 }

@@ -36,9 +36,9 @@ export class FeaturesProvider {
         path: '/operators',
         features: [
           {
-            id: '',
-            label: 'modules.operators.edit',
-            path: '/operators/edit',
+            id: '/detail',
+            label: 'modules.operators.detail',
+            path: '/operators/detail/1',
             icon: '',
             features: []
           },

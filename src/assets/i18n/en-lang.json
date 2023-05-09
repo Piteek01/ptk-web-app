@@ -104,6 +104,7 @@
     },
     "operators": {
       "main": "Operators",
+      "detail": "Detail",
       "edit": "Edit"
     },
     "parts": {

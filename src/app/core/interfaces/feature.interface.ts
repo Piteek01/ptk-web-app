@@ -1,8 +1,8 @@
-export interface IFeature {
+export interface Feature {
   id: string;
   label: string;
   path: string;
   icon?: string;
-  features?: IFeature[];
+  features?: Feature[];
   // permissions?: FeaturePermission[];
 }

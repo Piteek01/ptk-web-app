@@ -21,7 +21,7 @@
       <li *ngFor="let f of _currentModule.features" class="nav-item">
         <a [routerLink]="f.path" [ngClass]="{features: true}"
           routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
-          {{f.label | translate}}
+          <h3>{{f.label | translate}}</h3>
         </a>
       </li>
     </ul>
