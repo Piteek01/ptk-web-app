@@ -31,16 +31,7 @@
   }
 
   a {
-    color: $link-color;
-    display: inline-block;
-    text-decoration: none;
-    :hover {
-      color: $link-hover-color;
-    }
-
-    &.active-link {
-      @include for-active-link();
-    }
+    @include standard-link();
   }
 
 

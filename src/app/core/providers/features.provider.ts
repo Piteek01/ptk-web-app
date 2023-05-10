@@ -12,20 +12,20 @@ export class FeaturesProvider {
       {
         id: 'dashboard',
         title: 'modules.dashboard.main',
-        path: '/',
+        path: '/dashboard',
         features: [
           {
             id: '',
             label: 'modules.dashboard.regulations',
-            path: 'regulations',
-            icon: '',
+            path: '/dashboard/regulations',
+            icon: 'regulations',
             features: []
           },
           {
             id: '',
             label: 'modules.dashboard.staffing',
-            path: 'staffing',
-            icon: '',
+            path: '/dashboard/staffing',
+            icon: 'staffing',
             features: []
           }
         ]
@@ -35,13 +35,13 @@ export class FeaturesProvider {
         title: 'modules.operators.main',
         path: '/operators',
         features: [
-          {
-            id: 'detail',
-            label: 'modules.operators.detail',
-            path: '/operators/:id',
-            icon: '',
-            features: []
-          },
+          // {
+          //   id: 'detail',
+          //   label: 'modules.operators.detail',
+          //   path: '/operators/:id',
+          //   icon: '',
+          //   features: []
+          // },
           {
             id: 'staffing',
             label: 'modules.dashboard.staffing',

@@ -13,7 +13,7 @@ export class IModulesProvider {
       {
         id: IModulesEnum.dashboard,
         title: 'modules.dashboard.main',
-        path: '/'
+        path: '/dashboard'
       },
       {
         id: IModulesEnum.operators,

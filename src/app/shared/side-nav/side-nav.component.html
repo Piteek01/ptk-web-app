@@ -8,7 +8,8 @@
   <div *ngIf="sideNavStatus == 2">
     <header class="header d-flex justify-content-between align-items-center">
 
-      <a [routerLink]="_currentModule.path" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+      <a [routerLink]="_currentModule.path" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"
+        ariaCurrentWhenActive="page">
         <h2>{{ _currentModule.title | translate }}</h2>
       </a>
 
@@ -20,7 +21,7 @@
     <ul class="nav flex-column">
       <li *ngFor="let f of _currentModule.features" class="nav-item">
         <a [routerLink]="f.path" [ngClass]="{features: true}"
-          routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+          routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" ariaCurrentWhenActive="page">
           <h3>{{f.label | translate}}</h3>
         </a>
       </li>

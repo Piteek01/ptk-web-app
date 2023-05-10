@@ -7,16 +7,17 @@ export const routes: Route[] = [
       .then(m => m.DashboardMainComponent)
   },
   {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  },
+  {
     path: 'operators',
     loadChildren: () => import('./modules/operators/operators-routes.component')
       .then(m => m.OPERATORS_ROUTING)
   },
   {
-    path: '',
-    redirectTo: 'dashboard', pathMatch: 'full'
-  },
-  {
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: '/dashboard'
   },
 ];

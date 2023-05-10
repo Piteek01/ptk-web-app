@@ -105,6 +105,20 @@ p, h3 {
 //   background-color: $header-background-color;
 // }
 
+// Links
+@mixin standard-link() {
+  color: $link-color;
+  display: inline-block;
+  text-decoration: none;
+  :hover {
+    color: $link-hover-color;
+  }
+
+  &.active-link {
+    @include for-active-link();
+  }
+}
+
 @mixin for-active-link() {
   color: $active-link-color;
   font-weight: $active-link-weight;

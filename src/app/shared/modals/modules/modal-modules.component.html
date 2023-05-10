@@ -6,10 +6,12 @@
     </button>
   </div>
   <div class="modal-body row mx-0 px-0">
-    <h3 class="imodules col-6 mt-4 mb-4" *ngFor="let d of data">
-      <a [routerLink]="d.path" ariaCurrentWhenActive="page" (click)="modal.close('Close click')"
-        routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">{{d.title | translate}}</a>
-    </h3>
+
+    <a *ngFor="let d of data" [routerLink]="d.path" (click)="modal.close('Close click')"
+      class="imodules col-6 mt-4 mb-4" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+      <h3>{{d.title | translate}}</h3>
+    </a>
+
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Close click')">
