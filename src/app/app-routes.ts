@@ -7,17 +7,22 @@ export const routes: Route[] = [
       .then(m => m.DashboardMainComponent)
   },
   {
-    path: '',
-    redirectTo: '/dashboard',
-    pathMatch: 'full'
-  },
-  {
     path: 'operators',
     loadChildren: () => import('./modules/operators/operators-routes.component')
       .then(m => m.OPERATORS_ROUTING)
   },
   {
+    path: 'e404',
+    loadComponent: () => import('./shared/errors/e404/e404.component')
+      .then(m => m.E404Component)
+  },
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  },
+  {
     path: '**',
-    redirectTo: '/dashboard'
+    redirectTo: '/e404'
   },
 ];

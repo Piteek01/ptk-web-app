@@ -6,17 +6,15 @@ import { OperatorsDetailComponent } from "./detail/operators-detail.component";
 
 export const operatorPaths = {
   base: '',
-  detail: ':id',
-  error404: ''
+  detail: ':id'
 };
 
 const resolvedMainTitle: ResolveFn<string> = () => Promise.resolve(IModulesEnum.operators);
 const resolvedDetailTitle: ResolveFn<string> = () => Promise.resolve(IModulesEnum.operatorsDetail);
 
 export const OPERATORS_ROUTING: Route[] = [
-  { path: '', component: OperatorsMainComponent, title: resolvedMainTitle },
   { path: `${operatorPaths.detail}`, component: OperatorsDetailComponent, title: resolvedDetailTitle },
-  { path: '**', redirectTo: operatorPaths.error404 },
+  { path: '', pathMatch: 'full', component: OperatorsMainComponent, title: resolvedMainTitle }
 ];
 
 

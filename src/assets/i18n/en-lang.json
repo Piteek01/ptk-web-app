@@ -30,7 +30,8 @@
     "vertMore": "More menu options."
   },
   "errors": {
-    "generalError": "An error occurred. Please try again later."
+    "generalError": "An error occurred. Please try again later.",
+    "e404": "This page does not exist."
   },
   "header": {
     "changePassword": "Change password",
