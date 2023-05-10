@@ -36,16 +36,16 @@ export class FeaturesProvider {
         path: '/operators',
         features: [
           {
-            id: '/detail',
+            id: 'detail',
             label: 'modules.operators.detail',
-            path: '/operators/detail/1',
+            path: '/operators/:id',
             icon: '',
             features: []
           },
           {
-            id: '',
+            id: 'staffing',
             label: 'modules.dashboard.staffing',
-            path: 'staffing',
+            path: '/operators/staffing',
             icon: '',
             features: []
           }

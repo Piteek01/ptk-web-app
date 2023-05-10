@@ -5,8 +5,8 @@ import { OperatorsMainComponent } from "./main/operators-main.component";
 import { OperatorsDetailComponent } from "./detail/operators-detail.component";
 
 export const operatorPaths = {
-  base: 'operators',
-  detail: 'detail/:id',
+  base: '',
+  detail: ':id',
   error404: ''
 };
 

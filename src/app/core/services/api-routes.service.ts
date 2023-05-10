@@ -4,6 +4,7 @@ import { environment } from '../../../environments/environment';
 
 const getApiAccountsEndpoint = () => environment.apiAccountsEndpoint;
 const getApiContactsEndpoint = () => environment.apiAccountsEndpoint;
+const getApiOperatorsEndpoint = () => environment.apiUsersEndpoint;
 const getApiRolesEndpoint = () => environment.apiAccountsEndpoint;
 const getApiUsersEndpoint = () => environment.apiUsersEndpoint;
 
@@ -20,6 +21,9 @@ export class ApiRoutesService {
       },
       loginMfa: {
         post: () => `${getApiUsersEndpoint()}/login-mfa`
+      },
+      operators: {
+        api: () => `${getApiOperatorsEndpoint()}`
       },
       register: {
         post: () => `${getApiUsersEndpoint()}/register`

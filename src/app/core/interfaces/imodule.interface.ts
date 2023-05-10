@@ -1,4 +1,4 @@
-import { Feature } from './feature.interface';
+import { Feature } from './ifeature.interface';
 
 export interface IModule {
   id?: string;

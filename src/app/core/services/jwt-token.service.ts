@@ -73,7 +73,7 @@ export class JwtTokenService {
     const decodedToken = this.getDecodedToken();
 
     return decodedToken
-      ? decodedToken.exp
+      ? decodedToken
       : new Date().setFullYear(new Date().getFullYear() - 1);
   }
 }

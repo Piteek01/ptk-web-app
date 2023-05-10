@@ -3,7 +3,16 @@
   <div class="row">
     <app-side-nav [currentModule]="currentModule" (voted)="onVoted($event)" ></app-side-nav>
     <div [ngClass]="['contents', sideNavStatus == 1 ? 'wide-width' : 'narrow-width']">
-      {{'modules.operators.main' | translate}}
+      <header>{{'modules.operators.main' | translate}}</header>
+
+      <ul>
+        <li *ngFor="let operator of operators | async">
+          <a [routerLink]="['/operators', operator.id]">
+            <span class="badge">{{operator.firstName}}</span>
+          </a>
+        </li>
+      </ul>
+
     </div>
   </div>
 </section>
