@@ -1,18 +1,12 @@
-<section class="container-fluid operators">
-  <app-header-auth></app-header-auth>
-  <div class="row">
-    <app-side-nav [currentModule]="currentModule" (voted)="onVoted($event)" ></app-side-nav>
-    <div [ngClass]="['contents', sideNavStatus == 1 ? 'wide-width' : 'narrow-width']">
-      <header>{{'modules.operators.main' | translate}}</header>
+<section class="operators">
+  <header>{{'modules.operators.main' | translate}}</header>
 
-      <ul>
-        <li *ngFor="let operator of operators | async">
-          <a [ngClass]="{'selected': operator.id === selectedOperator?.id}" [routerLink]="['/'+moduleId, operator.id]">
-            <span class="badge">{{operator.firstName}}</span>
-          </a>
-        </li>
-      </ul>
+  <ul>
+    <li *ngFor="let operator of operators | async">
+      <a [ngClass]="{'selected': operator.id === selectedOperator?.id}" [routerLink]="['/'+moduleId, operator.id]">
+        <span class="badge">{{operator.firstName}}</span>
+      </a>
+    </li>
+  </ul>
 
-    </div>
-  </div>
 </section>

@@ -1,0 +1,33 @@
+@import 'mixins';
+
+.operators {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+  // z-index: $main-z-index;
+
+  .contents {
+    // width: 100vw;
+    background-color: $page-bk-color;
+    height: calc(100vh - #{$header-height});
+    margin-top: $header-height;
+    padding-top: .4em;
+
+    @include make-gutters();
+
+    &.wide-width {
+      margin-left: $navbarNarrowWidth;
+      width: calc(100vw - #{$navbarNarrowWidth})
+    }
+
+    &.narrow-width {
+      margin-left: $navbarWideWidth;
+      width: calc(100vw - #{$navbarWideWidth})
+    }
+
+    a {
+      @include standard-link();
+    }
+
+  }
+}

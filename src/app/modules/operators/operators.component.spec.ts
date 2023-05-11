@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { OperatorsDetailComponent } from './operators-detail.component';
+import { OperatorsComponent } from './operators.component';
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { FeaturesProvider } from 'src/app/core/providers/features.provider';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
@@ -12,13 +12,13 @@ describe('OperatorsMainComponent', () => {
     await TestBed.configureTestingModule({
     imports: [
         FeaturesProvider, SideNavService,
-        OperatorsDetailComponent
+        OperatorsComponent
     ]
 }).compileComponents();
   });
 
   it('should create the component', () => {
-    const fixture = TestBed.createComponent(OperatorsDetailComponent);
+    const fixture = TestBed.createComponent(OperatorsComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });

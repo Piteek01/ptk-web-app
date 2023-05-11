@@ -1,13 +1,8 @@
-<section class="container-fluid operators">
-  <app-header-auth></app-header-auth>
-  <div class="row">
-    <app-side-nav [currentModule]="currentModule"></app-side-nav>
-    <div [ngClass]="['contents', sideNavStatus == 1 ? 'wide-width' : 'narrow-width']">
-      {{'modules.operators.main' | translate}}
+<section class="operators">
+  <header>{{'modules.operators.main' | translate}}</header>
 
-      <div>
-        {{(selectedOperator | async)?.id}}
-      </div>
-    </div>
+  <div>
+    {{(selectedOperator | async)?.id}}
   </div>
+
 </section>
