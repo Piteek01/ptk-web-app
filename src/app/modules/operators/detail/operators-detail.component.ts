@@ -42,7 +42,7 @@ export class OperatorsDetailComponent implements OnInit, OnDestroy {
   ngOnInit() {
     const operatorId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.selectedOperator = this.operatorService.getOperatorDetails(operatorId);
+    this.selectedOperator = this.operatorService.getOperator(operatorId);
 
     this.currentModule = this.featuresProvider.provide(this.moduleId);
 

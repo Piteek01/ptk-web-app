@@ -9,7 +9,7 @@
 
   .modal-body {
     a {
-      @include standard-link();
+      @include feature-link();
     }
   }
 

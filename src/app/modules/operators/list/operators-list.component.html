@@ -7,7 +7,7 @@
 
       <ul>
         <li *ngFor="let operator of operators | async">
-          <a [routerLink]="['/operators', operator.id]">
+          <a [ngClass]="{'selected': operator.id === selectedOperator?.id}" [routerLink]="['/'+moduleId, operator.id]">
             <span class="badge">{{operator.firstName}}</span>
           </a>
         </li>

@@ -27,6 +27,7 @@ export class OperatorsListComponent implements OnInit, OnDestroy {
   operators!: Observable<Operator[]>;
   currentModule!: IModule;
   moduleId = IModulesEnum.operators;
+  selectedOperator!: Operator | null;
   sideNavStatus = 1;
   sideNavStatusSubscription!: Subscription;
 
@@ -41,6 +42,9 @@ export class OperatorsListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.operators = this.operatorService.getOperators(null);
+
+    this.selectedOperator = this.operatorService.selectedOperator;
+
     this.currentModule = this.featuresProvider.provide(this.moduleId);
 
     this.sideNavStatusSubscription = this.sideNavService.sideNavStatus.subscribe(

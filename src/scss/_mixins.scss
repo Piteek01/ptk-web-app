@@ -106,8 +106,8 @@ p, h3 {
 // }
 
 // Links
-@mixin standard-link() {
-  color: $link-color;
+@mixin feature-link() {
+  color: $feature-link-color;
   display: inline-block;
   text-decoration: none;
   :hover {
@@ -115,13 +115,24 @@ p, h3 {
   }
 
   &.active-link {
-    @include for-active-link();
+    color: $active-link-color;
+    font-weight: $active-link-weight;
   }
 }
 
-@mixin for-active-link() {
-  color: $active-link-color;
-  font-weight: $active-link-weight;
+@mixin standard-link() {
+  color: $link-primary-color;
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &.selected {
+    color: $link-secondary-color;
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
 }
 
 // Examples

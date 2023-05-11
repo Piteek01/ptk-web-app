@@ -25,5 +25,9 @@
       width: calc(100vw - #{$navbarWideWidth})
     }
 
+    a {
+      @include standard-link();
+    }
+
   }
 }

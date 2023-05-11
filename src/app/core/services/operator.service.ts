@@ -13,7 +13,7 @@ import { AppError } from '../interfaces/app-error.interface';
 
 @Injectable({ providedIn: 'root' })
 export class OperatorService {
-  private currentUserSubject: BehaviorSubject<Operator | null> =
+  private selectedOperatorSubject: BehaviorSubject<Operator | null> =
     new BehaviorSubject<Operator | null>(null);
   // private currentUserSubject: BehaviorSubject<User> = new BehaviorSubject<User>(null);
 
@@ -24,12 +24,12 @@ export class OperatorService {
     // private spinnerWrapperService: SpinnerWrapperService
   ) {}
 
-  public get currentUser(): Operator {
-    return this.currentUserSubject.value as Operator;
+  public get selectedOperator(): Operator | null {
+    return this.selectedOperatorSubject.value as Operator;
   }
 
   public set currentUser(user: Operator) {
-    this.currentUserSubject.next(user);
+    this.selectedOperatorSubject.next(user);
   }
 
   getOperators(params: any): Observable<any> {
@@ -63,31 +63,32 @@ export class OperatorService {
       );
   }
 
-  getOperatorDetails(params: any): Observable<any> {
+  getOperator(params: any): Observable<any> {
     // this.spinnerWrapperService.startLoading();
 
     if (params)
-      return of({ id: params, firstName: "First 1", lastName: "Last 1", email: "email1" });
+      this.selectedOperatorSubject.next({ id: params, firstName: "First 1", lastName: "Last 1", email: "email1", username: 'abc' })
+      return this.selectedOperatorSubject;
 
-    return this.apiService
-      .get(
-        this.apiRoutesService.getRoutes().users.api(),
-        params,
-        HeaderTypesEnum.applicationJson
-      )
-      .pipe(
-        // tap((response: any) => {
-        //   return response; // {Users: []}
-        // }),
-        catchError((err: AppError) => {
-          console.log('ERROR: ', err);
-          // const feError: FeError = { message: err.message, status: err.status };
-          return throwError(err);
-        }),
-        finalize(() => {
-          // this.spinnerWrapperService.stopLoading();
-        })
-      );
+    // return this.apiService
+    //   .get(
+    //     this.apiRoutesService.getRoutes().users.api(),
+    //     params,
+    //     HeaderTypesEnum.applicationJson
+    //   )
+    //   .pipe(
+    //     // tap((response: any) => {
+    //     //   return response; // {Users: []}
+    //     // }),
+    //     catchError((err: AppError) => {
+    //       console.log('ERROR: ', err);
+    //       // const feError: FeError = { message: err.message, status: err.status };
+    //       return throwError(err);
+    //     }),
+    //     finalize(() => {
+    //       // this.spinnerWrapperService.stopLoading();
+    //     })
+    //   );
   }
 
 }
