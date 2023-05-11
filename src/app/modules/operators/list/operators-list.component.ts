@@ -16,13 +16,13 @@ import { HeaderAuthComponent } from 'src/app/shared/headers/auth/header-auth.com
 import { OperatorService } from 'src/app/core/services/operator.service';
 
 @Component({
-  selector: 'app-operators-main',
+  selector: 'app-operators-list',
   standalone: true,
   imports: [CommonModule, TranslateModule, HeaderAuthComponent, SideNavComponent, RouterLinkActive, RouterLink],
-  templateUrl: './operators-main.component.html',
-  styleUrls: ['./operators-main.component.scss']
+  templateUrl: './operators-list.component.html',
+  styleUrls: ['./operators-list.component.scss']
 })
-export class OperatorsMainComponent implements OnInit, OnDestroy {
+export class OperatorsListComponent implements OnInit, OnDestroy {
 
   operators!: Observable<Operator[]>;
   currentModule!: IModule;

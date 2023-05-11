@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { OperatorsMainComponent } from './operators-main.component';
+import { OperatorsMainComponent } from './operators-list.component';
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { FeaturesProvider } from 'src/app/core/providers/features.provider';
 import { SideNavService } from 'src/app/core/services/side-nav.service';

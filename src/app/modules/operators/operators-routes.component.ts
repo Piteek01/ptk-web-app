@@ -1,7 +1,7 @@
 import { ResolveFn, Route } from "@angular/router";
 
 import { IModulesEnum } from "src/app/core/enums/imodules.enum";
-import { OperatorsMainComponent } from "./main/operators-main.component";
+import { OperatorsListComponent } from "./list/operators-list.component";
 import { OperatorsDetailComponent } from "./detail/operators-detail.component";
 
 export const operatorPaths = {
@@ -14,36 +14,5 @@ const resolvedDetailTitle: ResolveFn<string> = () => Promise.resolve(IModulesEnu
 
 export const OPERATORS_ROUTING: Route[] = [
   { path: `${operatorPaths.detail}`, component: OperatorsDetailComponent, title: resolvedDetailTitle },
-  { path: '', pathMatch: 'full', component: OperatorsMainComponent, title: resolvedMainTitle }
+  { path: '', pathMatch: 'full', component: OperatorsListComponent, title: resolvedMainTitle }
 ];
-
-
-// import { RouterModule, Routes } from '@angular/router';
-// import { OperatorsMainComponent } from './main/operators-main.component';
-
-// import { NgModule } from '@angular/core';
-
-// const routes: Routes = [
-//   {
-//     path: 'dashboard',
-//     // redirectTo: 'dashboard',
-//     pathMatch: 'full',
-//     // component: OperatorsMainComponent
-//   },
-//   {
-//     path: '',
-//     // redirectTo: 'dashboard',
-//     pathMatch: 'full',
-//     // component: OperatorsMainComponent
-//   },
-//   {
-//     path: '**',
-//     redirectTo: ''
-//   }
-// ];
-
-// @NgModule({
-//   imports: [RouterModule.forChild(routes)],
-//   exports: [RouterModule]
-// })
-// export class OperatorsRoutingModule {}
