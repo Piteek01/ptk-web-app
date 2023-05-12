@@ -3,6 +3,7 @@ import { ResolveFn, Route } from "@angular/router";
 import { IModulesEnum } from "src/app/core/enums/imodules.enum";
 import { authGuard } from "src/app/core/guards/auth.guard";
 import { canDeactivateGuard } from "src/app/core/guards/can-deactivate.guard";
+import { operatorDetailResolver } from "src/app/core/resolvers/operators.resolver";
 
 import { AuthComponent } from "./auth.component";
 import { DashboardSummaryComponent } from "../dashboard/summary/dashboard-summary.component";
@@ -35,6 +36,9 @@ export const OPERATORS_ROUTING: Route[] = [
       { path: `${OperatorsPaths.detail}`,
         component: OperatorsDetailComponent,
         canDeactivate: [canDeactivateGuard],
+        resolve: {
+          operator: operatorDetailResolver
+        },
         title: 'SMX' },
       { path: '', component: OperatorsListComponent, title: 'SMX' }
     ]

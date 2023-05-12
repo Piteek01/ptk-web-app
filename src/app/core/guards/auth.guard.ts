@@ -1,5 +1,5 @@
 import {inject} from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 import { AuthService } from '../services/auth.service';
 import { IModulesEnum } from '../enums/imodules.enum';
@@ -12,6 +12,12 @@ export const authGuard = () => {
     return true;
   }
 
+  const token = authService.getToken();
+
+  const navigationExtras: NavigationExtras = {
+    queryParams: { token: token }
+  }
+
   // Redirect to the login page
-  return router.parseUrl(`/${IModulesEnum.login}`);
+  return router.createUrlTree([`/${IModulesEnum.login}`], navigationExtras);
 };

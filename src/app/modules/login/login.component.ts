@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { AuthService } from 'src/app/core/services/auth.service';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,9 @@ export class LoginComponent {
 
   message: string;
 
-  constructor(public authService: AuthService, public router: Router) {
+
+  constructor(public authService: AuthService,
+    private router: Router) {
     this.message = this.getMessage();
   }
 
@@ -35,8 +37,13 @@ export class LoginComponent {
         // However to keep the example simple, we will always redirect to `/admin`.
         const redirectUrl = this.authService.getDestinationUrl();
 
+        const navigationExtras: NavigationExtras = {
+          queryParamsHandling: 'preserve',
+          preserveFragment: true
+        }
+
         // Redirect the user
-        this.router.navigate(['/dashboard']);
+        this.router.navigate([redirectUrl], navigationExtras);
       }
     });
   }

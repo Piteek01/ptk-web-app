@@ -9,7 +9,7 @@ import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { Operator } from 'src/app/core/interfaces/operator.interface';
 
 import { DialogService } from 'src/app/core/services/dialog.service';
-import { OperatorService } from 'src/app/core/services/operator.service';
+// import { OperatorService } from 'src/app/core/services/operator.service';
 
 import { SideNavComponent } from 'src/app/shared/side-nav/side-nav.component';
 import { HeaderAuthComponent } from 'src/app/shared/headers/auth/header-auth.component';
@@ -26,21 +26,25 @@ export class OperatorsDetailComponent implements OnInit {
   currentModule!: IModule;
   isChanged = false;
   moduleId = IModulesEnum.operators;
-  selectedOperator!: Observable<Operator>;
+  // selectedOperator!: Observable<Operator>;
+  selectedOperator!: Operator;
   sideNavStatus = 1;
   sideNavStatusSubscription!: Subscription;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private dialogService: DialogService,
-    private operatorService: OperatorService,
+    // private operatorService: OperatorService,
     ) {
   }
 
   ngOnInit() {
-    const operatorId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.activatedRoute.data.subscribe(data => {
+      this.selectedOperator = data['operator'];
+    })
+    // const operatorId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.selectedOperator = this.operatorService.getOperator(operatorId);
+    // this.selectedOperator = this.operatorService.getOperator(operatorId);
 
   }
 

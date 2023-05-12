@@ -5,7 +5,7 @@ import { authGuard } from './core/guards/auth.guard';
 export const routes: Route[] = [
   {
     path: IModulesEnum.dashboard,
-    canActivate: [authGuard],
+    canMatch: [authGuard],
     loadChildren: () => import('./modules/auth/auth-routes.component')
       .then(m => m.DASHBOARD_ROUTING)
   },
@@ -16,7 +16,7 @@ export const routes: Route[] = [
   },
   {
     path: IModulesEnum.operators,
-    canActivate: [authGuard],
+    canMatch: [authGuard],
     loadChildren: () => import('./modules/auth/auth-routes.component')
       .then(m => m.OPERATORS_ROUTING)
   },

@@ -27,7 +27,11 @@ export class AuthService {
   }
 
   getDestinationUrl(): string {
-    return '/login' === this.state.routerState.snapshot.url ? '/dashboard' : this.state.routerState.snapshot.url;
+    return this.state.routerState.snapshot.url.includes('/login') ? '/dashboard' :
+      this.state.routerState.snapshot.url;
+  }
 
+  getToken(): string {
+    return 'safasfsd'
   }
 }
