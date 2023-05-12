@@ -11,17 +11,17 @@ import { SideNavComponent } from 'src/app/shared/side-nav/side-nav.component';
 import { HeaderAuthComponent } from 'src/app/shared/headers/auth/header-auth.component';
 
 @Component({
-  selector: 'app-dashboard-main',
+  selector: 'app-dashboard-summary',
   standalone: true,
   imports: [
     CommonModule, TranslateModule,
     HeaderAuthComponent,
     SideNavComponent
   ],
-  templateUrl: './dashboard-main.component.html',
-  styleUrls: ['./dashboard-main.component.scss']
+  templateUrl: './dashboard-summary.component.html',
+  styleUrls: ['./dashboard-summary.component.scss']
 })
-export class DashboardMainComponent implements OnInit, OnDestroy {
+export class DashboardSummaryComponent implements OnInit, OnDestroy {
 
   currentModule!: IModule;
   moduleId = 'dashboard';
@@ -40,7 +40,7 @@ export class DashboardMainComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.sideNavStatusSubscription.unsubscribe()
+    this.sideNavStatusSubscription.unsubscribe();
   }
 
   onVoted(agreed: boolean) {

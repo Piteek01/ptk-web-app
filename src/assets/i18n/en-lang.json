@@ -99,12 +99,12 @@
       "users": "Users"
     },
     "dashboard": {
-      "main": "Dashboard",
+      "summary": "Dashboard",
       "regulations": "New Regulations",
       "staffing": "New Staff Members"
     },
     "operators": {
-      "main": "Operators",
+      "list": "Operators",
       "detail": "Detail",
       "edit": "Edit"
     },

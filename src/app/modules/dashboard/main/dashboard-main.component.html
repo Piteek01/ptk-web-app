@@ -1,9 +1,0 @@
-<section class="container-fluid dashboard">
-  <app-header-auth></app-header-auth>
-  <div class="row">
-    <app-side-nav [currentModule]="currentModule" (voted)="onVoted($event)" ></app-side-nav>
-    <div [ngClass]="['contents', sideNavStatus == 1 ? 'wide-width' : 'narrow-width']">
-      {{'modules.dashboard.main' | translate}}
-    </div>
-  </div>
-</section>

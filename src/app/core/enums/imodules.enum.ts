@@ -4,7 +4,7 @@ export enum IModulesEnum {
   dashboard = 'dashboard',
   locations = 'locations',
   operators = 'operators',
-  operatorsDetail = 'operators detail',
+  operatorsDetail = 'operatorsdetail',
   parts = 'parts',
   purchasing = 'purchasing',
   receiving = 'receiving',

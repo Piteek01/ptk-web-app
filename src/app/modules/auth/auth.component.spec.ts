@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { OperatorsComponent } from './operators.component';
+import { OperatorsComponent } from './auth.component';
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { FeaturesProvider } from 'src/app/core/providers/features.provider';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
 
-describe('OperatorsMainComponent', () => {
+describe('AuthComponent', () => {
   const parentName = 'Operators';
   const sideNavFeatures = [ 'New Regulations', 'New Staff Members' ];
 

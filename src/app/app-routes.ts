@@ -1,14 +1,17 @@
 import { Route } from '@angular/router';
+import { IModulesEnum } from './core/enums/imodules.enum';
 
 export const routes: Route[] = [
   {
-    path: 'dashboard',
-    loadComponent: () => import('./modules/dashboard/main/dashboard-main.component')
-      .then(m => m.DashboardMainComponent)
+    path: IModulesEnum.dashboard,
+    data: { moduleId: IModulesEnum.dashboard},
+    loadChildren: () => import('./modules/auth/auth-routes.component')
+      .then(m => m.DASHBOARD_ROUTING)
   },
   {
-    path: 'operators',
-    loadChildren: () => import('./modules/operators/operators-routes.component')
+    path: IModulesEnum.operators,
+    data: { moduleId: IModulesEnum.operators },
+    loadChildren: () => import('./modules/auth/auth-routes.component')
       .then(m => m.OPERATORS_ROUTING)
   },
   {

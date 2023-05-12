@@ -11,7 +11,7 @@ export class FeaturesProvider {
     modules = [
       {
         id: 'dashboard',
-        title: 'modules.dashboard.main',
+        title: 'modules.dashboard.summary',
         path: '/dashboard',
         features: [
           {
@@ -32,7 +32,7 @@ export class FeaturesProvider {
       },
       {
         id: 'operators',
-        title: 'modules.operators.main',
+        title: 'modules.operators.list',
         path: '/operators',
         features: [
           // {

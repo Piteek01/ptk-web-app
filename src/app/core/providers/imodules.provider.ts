@@ -12,12 +12,12 @@ export class IModulesProvider {
     modules = [
       {
         id: IModulesEnum.dashboard,
-        title: 'modules.dashboard.main',
+        title: 'modules.dashboard.summary',
         path: '/dashboard'
       },
       {
         id: IModulesEnum.operators,
-        title: 'modules.operators.main',
+        title: 'modules.operators.list',
         path: '/operators'
       },
       {
