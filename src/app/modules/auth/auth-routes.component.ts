@@ -16,6 +16,7 @@ const resolvedDetailTitle: ResolveFn<string> = () => Promise.resolve(IModulesEnu
 
 export const DASHBOARD_ROUTING: Route[] = [
   { path: '', component: AuthComponent,
+    data: { moduleId: IModulesEnum.dashboard },
     children: [
       { path: '', component: DashboardSummaryComponent, title: 'SMX' }
     ]
@@ -25,6 +26,7 @@ export const DASHBOARD_ROUTING: Route[] = [
 
 export const OPERATORS_ROUTING: Route[] = [
   { path: '', component: AuthComponent,
+    data: { moduleId: IModulesEnum.operators },
     children: [
       { path: `${OperatorsPaths.detail}`, component: OperatorsDetailComponent, title: 'SMX' },
       { path: '', component: OperatorsListComponent, title: 'SMX' }
