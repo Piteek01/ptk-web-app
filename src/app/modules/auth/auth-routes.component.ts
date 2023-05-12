@@ -1,6 +1,8 @@
 import { ResolveFn, Route } from "@angular/router";
 
 import { IModulesEnum } from "src/app/core/enums/imodules.enum";
+import { authGuard } from "src/app/core/guards/auth.guard";
+import { canDeactivateGuard } from "src/app/core/guards/can-deactivate.guard";
 
 import { AuthComponent } from "./auth.component";
 import { DashboardSummaryComponent } from "../dashboard/summary/dashboard-summary.component";
@@ -17,6 +19,7 @@ const resolvedDetailTitle: ResolveFn<string> = () => Promise.resolve(IModulesEnu
 export const DASHBOARD_ROUTING: Route[] = [
   { path: '', component: AuthComponent,
     data: { moduleId: IModulesEnum.dashboard },
+    canActivate: [authGuard],
     children: [
       { path: '', component: DashboardSummaryComponent, title: 'SMX' }
     ]
@@ -27,8 +30,12 @@ export const DASHBOARD_ROUTING: Route[] = [
 export const OPERATORS_ROUTING: Route[] = [
   { path: '', component: AuthComponent,
     data: { moduleId: IModulesEnum.operators },
+    canActivate: [authGuard],
     children: [
-      { path: `${OperatorsPaths.detail}`, component: OperatorsDetailComponent, title: 'SMX' },
+      { path: `${OperatorsPaths.detail}`,
+        component: OperatorsDetailComponent,
+        canDeactivate: [canDeactivateGuard],
+        title: 'SMX' },
       { path: '', component: OperatorsListComponent, title: 'SMX' }
     ]
   }

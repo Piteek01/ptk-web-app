@@ -3,6 +3,7 @@ export enum IModulesEnum {
   control = 'control',
   dashboard = 'dashboard',
   locations = 'locations',
+  login = 'login',
   operators = 'operators',
   operatorsDetail = 'operatorsdetail',
   parts = 'parts',

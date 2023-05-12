@@ -1,14 +1,22 @@
 import { Route } from '@angular/router';
 import { IModulesEnum } from './core/enums/imodules.enum';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Route[] = [
   {
     path: IModulesEnum.dashboard,
+    canActivate: [authGuard],
     loadChildren: () => import('./modules/auth/auth-routes.component')
       .then(m => m.DASHBOARD_ROUTING)
   },
   {
+    path: IModulesEnum.login,
+    loadComponent: () => import('./modules/login/login.component')
+      .then(m => m.LoginComponent)
+  },
+  {
     path: IModulesEnum.operators,
+    canActivate: [authGuard],
     loadChildren: () => import('./modules/auth/auth-routes.component')
       .then(m => m.OPERATORS_ROUTING)
   },
