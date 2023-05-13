@@ -14,10 +14,11 @@ export const authGuard = () => {
 
   const token = authService.getToken();
 
-  const navigationExtras: NavigationExtras = {
-    queryParams: { token: token }
-  }
+  // const navigationExtras: NavigationExtras = {
+  //   queryParams: { token: token }
+  // }
 
   // Redirect to the login page
-  return router.createUrlTree([`/${IModulesEnum.login}`], navigationExtras);
+  // return router.createUrlTree([`/${IModulesEnum.login}`], navigationExtras);
+  return router.createUrlTree([`/${IModulesEnum.login}`]);
 };

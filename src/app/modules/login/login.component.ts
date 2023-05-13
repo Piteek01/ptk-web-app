@@ -37,13 +37,14 @@ export class LoginComponent {
         // However to keep the example simple, we will always redirect to `/admin`.
         const redirectUrl = this.authService.getDestinationUrl();
 
-        const navigationExtras: NavigationExtras = {
-          queryParamsHandling: 'preserve',
-          preserveFragment: true
-        }
+        // const navigationExtras: NavigationExtras = {
+        //   queryParamsHandling: 'preserve',
+        //   preserveFragment: true
+        // }
 
         // Redirect the user
-        this.router.navigate([redirectUrl], navigationExtras);
+        // this.router.navigate([redirectUrl], navigationExtras);
+        this.router.navigate([redirectUrl]);
       }
     });
   }
