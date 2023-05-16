@@ -8,7 +8,7 @@ import { tap, delay } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class AuthService {
-  isLoggedIn = false;
+  isLoggedIn = true;
 
   state = inject(Router);
 

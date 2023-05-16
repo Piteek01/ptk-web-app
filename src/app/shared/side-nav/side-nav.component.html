@@ -8,7 +8,7 @@
   <div *ngIf="sideNavStatus == 2">
     <header class="header d-flex justify-content-between align-items-center">
 
-      <a [routerLink]="_currentModule.path" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"
+      <a [routerLink]="_currentModule.path" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: false}"
         ariaCurrentWhenActive="page">
         <h2>{{ _currentModule.title | translate }}</h2>
       </a>

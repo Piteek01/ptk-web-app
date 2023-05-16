@@ -1,22 +1,24 @@
 import { TestBed } from '@angular/core/testing';
-import { LoginComponent } from './login.component';
+import { OperatorsDetailComponent } from './operators-detail.component';
+import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { FeaturesProvider } from 'src/app/core/providers/features.provider';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
 
-describe('LoginComponent', () => {
-  const parentName = 'Dashboard';
+describe('OperatorsMainComponent', () => {
+  const parentName = 'Operators';
+  const sideNavFeatures = [ 'New Regulations', 'New Staff Members' ];
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
     imports: [
         FeaturesProvider, SideNavService,
-        LoginComponent
+        OperatorsDetailComponent
     ]
 }).compileComponents();
   });
 
   it('should create the component', () => {
-    const fixture = TestBed.createComponent(LoginComponent);
+    const fixture = TestBed.createComponent(OperatorsDetailComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });

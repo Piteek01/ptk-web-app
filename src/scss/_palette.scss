@@ -45,17 +45,6 @@ $teals:  (
 // Chosen colors
 // $primary: #141414;
 
-$theme-colors:  (
-  'primary':    $primary,
-  'secondary':  $secondary,
-  'success':    $success,
-  'info':       $info,
-  'warning':    $warning,
-  'danger':     $danger,
-  'light':      $light,
-  'dark':       $dark
-);
-
 @function blueColors($key: '500') {
   @return map-get($blues, $key);
 }
@@ -67,3 +56,18 @@ $theme-colors:  (
 @function tealColors($key: '500') {
   @return map-get($teals, $key);
 }
+
+$primary: tealColors($key: '700');
+
+$theme-colors: map-merge($theme-colors, (
+  'primary':    $primary,
+  'secondary':  $secondary,
+  'success':    $success,
+  'info':       $info,
+  'warning':    $warning,
+  'danger':     $danger,
+  'light':      $light,
+  'dark':       $dark
+));
+
+

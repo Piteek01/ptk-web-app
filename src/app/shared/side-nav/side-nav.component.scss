@@ -6,6 +6,7 @@
   height: calc(100vh - #{$header-height});
   // @include make-small-gutters();
   // z-index: $page-actions-auth;
+  z-index: 99;
 
   &.wide-width {
     width: $navbarWideWidth;

@@ -1,4 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { RouterLinkActive, RouterLink } from '@angular/router';
+
 import { ModalDismissReasons, NgbModal, NgbNavbar, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu } from '@ng-bootstrap/ng-bootstrap';
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { IModulesProvider } from 'src/app/core/providers/imodules.provider';
@@ -11,7 +14,8 @@ import { ModalModulesComponent } from '../../modals/modules/modal-modules.compon
     encapsulation: ViewEncapsulation.None,
     styleUrls: ['./header-auth.component.scss'],
     standalone: true,
-    imports: [NgbNavbar, ModalModulesComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, TranslateModule]
+    imports: [CommonModule, NgbNavbar, ModalModulesComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu,
+      RouterLinkActive, RouterLink, TranslateModule]
 })
 export class HeaderAuthComponent implements OnInit {
 

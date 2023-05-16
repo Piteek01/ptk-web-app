@@ -1,5 +1,4 @@
 <section class="operators">
-
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -8,21 +7,22 @@
   </nav>
 
   <div class="contents">
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between mb-3">
       <h2 class="title">{{'modules.operators.list' | translate}}</h2>
       <div class="actions">
         <button type="button" class="btn mr-1" [disabled]="true">{{'actions.edit' | translate}}</button>
         <button type="button" class="btn mr-1" [disabled]="true">{{'actions.deactivate' | translate}}</button>
-        <a role="button" [routerLink]="['/'+moduleId, '_']" class="btn mr-1">{{'actions.create' | translate}}</a>
+        <a role="button" [routerLink]="'/'" class="btn mr-1">{{'actions.save' | translate}}</a>
       </div>
     </div>
 
-    <div *ngFor="let operator of operators | async" class="align-middle">
-      <input type="checkbox" aria-label="Checkbox for following text input">
-      <a [ngClass]="{'selected': operator.id === selectedOperator?.id, 'person': true}" [routerLink]="['/'+moduleId, operator.id]">
-        <span class="badge">{{operator.firstName}}</span>
-      </a>
-    </div>
+    <label for="firstNameControl">{{'models.operator.firstName' | translate}}:</label>
+    <input id="firstNameControl" type="text" [formControl]="firstNameControl">
+
+    <label for="lastNameControl">{{'models.operator.lastName' | translate}}: </label>
+    <input id="lastNameControl" type="text" [formControl]="lastNameControl">
+
+
   </div>
 
 </section>

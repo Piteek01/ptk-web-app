@@ -6,6 +6,14 @@ $app-min-width: 275px;
 // Body
 $body-color: tealColors('900');
 
+// Buttons
+$button-bg-color: tealColors('600');
+$button-color: $white;
+$button-hover-color: tealColors('200');
+
+// Contents
+$min-width-contents: 350px;
+
 // Gutters
 $xsmall-gutter: 5px;
 $small-gutter: 8px;
@@ -22,8 +30,8 @@ $header-modal: grayColors('800');
 // Links
 $link-primary-color: blueColors('500');
 $link-secondary-color: blueColors('700');
-$link-hover-color: blueColors('400');
-$active-link-color: grayColors('500');
+$link-hover-color: blueColors('600');
+$active-link-color: blueColors('300');
 $active-link-weight: 500;
 $feature-link-color: grayColors('900');
 $feature-link-hover-color: tealColors('700');
@@ -34,6 +42,7 @@ $navbarWideWidth: 23em;
 
 // Pages
 $page-bk-color: grayColors('200');
+$page-contents-color: grayColors('100');
 
 // SVGs
 $svg-hover-color: #d2f4ea;

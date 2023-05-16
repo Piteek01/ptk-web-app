@@ -3,6 +3,7 @@ import {ActivatedRouteSnapshot, ResolveFn, Router} from '@angular/router';
 import {EMPTY, of} from 'rxjs';
 import {mergeMap} from 'rxjs/operators';
 
+import { IModulesEnum } from '../enums/imodules.enum';
 import { Operator } from '../interfaces/operator.interface';
 import { OperatorService } from '../services/operator.service';
 
@@ -15,7 +16,7 @@ export const operatorDetailResolver: ResolveFn<Operator> = (route: ActivatedRout
     if (operator) {
       return of(operator);
     } else {  // id not found
-      router.navigate(['/operators']);
+      router.navigate([`/${IModulesEnum.operators}`]);
       return EMPTY;
     }
   }));

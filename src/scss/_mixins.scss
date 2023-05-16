@@ -70,6 +70,14 @@ p, h3 {
   }
  }
 
+ @mixin make-buttons() {
+  background-color: $button-bg-color;
+  color: $button-color;
+  &:hover {
+    color: $button-hover-color;
+  }
+ }
+
  @mixin make-gutters() {
   padding-right: $small-gutter;
   padding-left: $small-gutter;
@@ -88,6 +96,20 @@ p, h3 {
   }
  }
 
+ @mixin make-form-controls() {
+  font-size: 1rem;
+  margin: 0;
+  @include media-breakpoint-up(sm) {
+    font-size: 1rem;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 1.1rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 1.2rem;
+  }
+ }
+
  @mixin make-small-gutters() {
   padding-right: $xsmall-gutter;
   padding-left: $xsmall-gutter;
@@ -99,6 +121,13 @@ p, h3 {
   @include make-gutters();
   background-color: $header-background-color;
  }
+
+@mixin make-page-contents() {
+  background-color: $page-contents-color;
+  padding: 1em;
+}
+
+
 // .smx-header {
 //   height: $header-height;
 //   @include make-gutters();
@@ -165,4 +194,3 @@ p, h3 {
 .custom-container {
   @include make-container();
 }
-

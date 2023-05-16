@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand header-auth fixed-top p-0">
   <header class="container-fluid align-items-center header">
-    <a class="navbar-brand col-auto navbar-a p-0 pr-2 mr-sm-1 mr-lg-3" href="#">
+
+    <a [ngClass]="'navbar-brand col-auto navbar-a p-0 pr-2 mr-sm-1 mr-lg-3'" [routerLink]="['/dashboard']">
       <img src="../../../../assets/images/logo.svg" alt="SMX" width="90" height="13">
     </a>
 
@@ -13,11 +14,10 @@
       <app-modal-modules [modal]="modal" [data]="imodules"></app-modal-modules>
     </ng-template>
 
-
     <div class="collapse navbar-collapse w-100 px-0 justify-content-end" id="navbarCollapse">
       <ul class="navbar-nav m-0">
           <li class="nav-item">
-          <a class="nav-link navbar-a active" aria-current="page" href="#">Home</a>
+          <a class="nav-link navbar-a active" aria-current="page" href="">Home</a>
           </li>
           <li class="nav-item">
           <a class="nav-link navbar-a" aria-current="page" href="#">test 1</a>

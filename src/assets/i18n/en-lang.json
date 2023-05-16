@@ -14,8 +14,11 @@
     "changePassword": "Change password",
     "charts": "Charts",
     "close": "Close",
+    "create": "Create",
+    "deactivate": "Deactivate",
     "defaultSettings": "Default Settings",
     "deselectAll": "Deselect All",
+    "edit": "Edit",
     "goBack": "Go Back",
     "greetings": "Hi",
     "list": "List",
@@ -63,6 +66,12 @@
       "required": "A value is required."
     }
   },
+  "models": {
+    "operator": {
+      "firstName": "First name",
+      "lastName": "Last name"
+    }
+  },
   "modules": {
     "assets": {
       "main": "Assets"
@@ -106,7 +115,8 @@
     "operators": {
       "list": "Operators",
       "detail": "Detail",
-      "edit": "Edit"
+      "edit": "Edit",
+      "new": "New"
     },
     "parts": {
       "main": "Parts & Supplies",

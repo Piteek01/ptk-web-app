@@ -9,6 +9,7 @@ import { AuthComponent } from "./auth.component";
 import { DashboardSummaryComponent } from "../dashboard/summary/dashboard-summary.component";
 import { OperatorsDetailComponent } from "../operators/detail/operators-detail.component";
 import { OperatorsListComponent } from "../operators/list/operators-list.component";
+import { OperatorsNewComponent } from "../operators/new/operators-new.component";
 
 const OperatorsPaths = {
   detail: ':id'
@@ -33,13 +34,19 @@ export const OPERATORS_ROUTING: Route[] = [
     data: { moduleId: IModulesEnum.operators },
     canActivate: [authGuard],
     children: [
+      { path: '_',
+        component: OperatorsNewComponent,
+        canDeactivate: [canDeactivateGuard],
+        title: 'SMX'
+       },
       { path: `${OperatorsPaths.detail}`,
         component: OperatorsDetailComponent,
         canDeactivate: [canDeactivateGuard],
         resolve: {
           operator: operatorDetailResolver
         },
-        title: 'SMX' },
+        title: 'SMX'
+       },
       { path: '', component: OperatorsListComponent, title: 'SMX' }
     ]
   }

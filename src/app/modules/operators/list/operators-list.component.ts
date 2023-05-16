@@ -2,10 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLinkActive, RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { IModulesEnum } from 'src/app/core/enums/imodules.enum';
-import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { Operator } from 'src/app/core/interfaces/operator.interface';
 import { SideNavComponent } from 'src/app/shared/side-nav/side-nav.component';
 import { HeaderAuthComponent } from 'src/app/shared/headers/auth/header-auth.component';
@@ -16,16 +15,13 @@ import { OperatorService } from 'src/app/core/services/operator.service';
   standalone: true,
   imports: [CommonModule, TranslateModule, HeaderAuthComponent, SideNavComponent, RouterLinkActive, RouterLink],
   templateUrl: './operators-list.component.html',
-  styleUrls: ['./operators-list.component.scss']
+  styleUrls: ['../operators.component.scss']
 })
 export class OperatorsListComponent implements OnInit {
 
   operators!: Observable<Operator[]>;
-  currentModule!: IModule;
   moduleId = IModulesEnum.operators;
   selectedOperator!: Operator | null;
-  sideNavStatus = 1;
-  sideNavStatusSubscription!: Subscription;
 
   constructor(
     private operatorService: OperatorService,
