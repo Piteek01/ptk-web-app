@@ -96,6 +96,11 @@ p, h3 {
   }
  }
 
+ @mixin make-small-gutters() {
+  padding-right: $xsmall-gutter;
+  padding-left: $xsmall-gutter;
+ }
+
  @mixin make-form-controls() {
   font-size: 1rem;
   margin: 0;
@@ -106,13 +111,8 @@ p, h3 {
     font-size: 1.1rem;
   }
   @include media-breakpoint-up(lg) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
- }
-
- @mixin make-small-gutters() {
-  padding-right: $xsmall-gutter;
-  padding-left: $xsmall-gutter;
  }
 
 // Headers

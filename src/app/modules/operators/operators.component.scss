@@ -24,8 +24,10 @@
       min-width: 150px;
     }
 
-    input {
-      @include make-form-controls();
+    form {
+      input {
+        @include make-form-controls();
+      }
     }
   }
 

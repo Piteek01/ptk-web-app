@@ -68,8 +68,15 @@
   },
   "models": {
     "operator": {
+      "address": "Address",
+      "city": "City",
+      "country": "Country",
       "firstName": "First name",
-      "lastName": "Last name"
+      "lastName": "Last name",
+      "name": "Name",
+      "postalCode": "Zip/Postal code",
+      "region": "State/Region",
+      "street1": "Street"
     }
   },
   "modules": {

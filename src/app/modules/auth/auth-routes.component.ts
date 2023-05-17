@@ -34,7 +34,7 @@ export const OPERATORS_ROUTING: Route[] = [
     data: { moduleId: IModulesEnum.operators },
     canActivate: [authGuard],
     children: [
-      { path: '_',
+      { path: 'AezPexrrA3Jn',
         component: OperatorsNewComponent,
         canDeactivate: [canDeactivateGuard],
         title: 'SMX'
