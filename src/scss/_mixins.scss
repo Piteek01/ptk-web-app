@@ -127,6 +127,10 @@ p, h3 {
   padding: 1em;
 }
 
+@mixin make-page-contents-part2() {
+  background-color: $page-contents-part2-color;
+}
+
 
 // .smx-header {
 //   height: $header-height;

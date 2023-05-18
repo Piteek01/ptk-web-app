@@ -12,7 +12,9 @@
     height: calc(100vh - #{$header-height});
     margin-top: $header-height;
     padding-top: .4em;
+    padding-bottom: 4em;
     z-index: 100;
+    overflow-y: auto;
 
     @include make-gutters();
 

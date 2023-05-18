@@ -50,8 +50,24 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-6 px-0">
-          Test
+        <div class="col-12 col-md-6 px-0 part2">
+          <div class="d-flex mb-3">
+            <button type="button" class="btn mr-1" [disabled]="false" (click)="addLicense()">{{'actions.add' | translate}}</button>
+            <button type="button" class="btn mr-1" [disabled]="false">{{'actions.delete' | translate}}</button>
+            <button type="button" class="btn mr-1" [disabled]="false">{{'actions.cancel' | translate}}</button>
+          </div>
+
+          <div class="row">
+
+            <h3 class="col-12 mt-3 px-0">{{'models.operator.licenses' | translate}}</h3>
+            <div formArrayName="licenses" *ngFor="let lic of licenses.controls; let i = index" class="col-12 pl-0 pr-2">
+              <div [formGroupName]="i">
+                <label for="{{'licenseNum' + i}}">License Num</label><br/>
+                <input id="{{'licenseNum' + i}}" type="text" class="form-control" formControlName="licenseNum">
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 

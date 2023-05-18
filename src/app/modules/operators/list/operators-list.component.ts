@@ -30,7 +30,7 @@ export class OperatorsListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.operators = this.operatorService.getOperators(null);
+    this.operators = this.operatorService.getOperators();
 
     this.selectedOperator = this.operatorService.selectedOperator;
   }

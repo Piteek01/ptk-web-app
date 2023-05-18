@@ -21,3 +21,11 @@ export const operatorDetailResolver: ResolveFn<Operator> = (route: ActivatedRout
     }
   }));
 }
+
+export const operatorsResolver: ResolveFn<Operator[]> = () => {
+  const operatorService = inject(OperatorService);
+
+  return operatorService.getOperators().pipe(operators => {
+    return operators;
+  });
+}

@@ -53,24 +53,7 @@ export class OperatorsNewComponent implements OnInit {
       postalCode: [''],
       countryCode: ['']
     }),
-    licenses: this.fb.array([
-      this.fb.group({
-        licenseNum: [''],
-        licenseType: [''],
-        licenseAgency: [''],
-        issueDate: [''],
-        expiryDate: [''],
-        ratings: this.fb.array([
-          this.fb.group({
-            ratingNum: [''],
-            ratingType: [''],
-            ratingAgency: [''],
-            issueDate: [''],
-            expiryDate: ['']
-          })
-        ])
-      })
-    ])
+    licenses: this.fb.array([])
   });
 
 
@@ -96,9 +79,9 @@ export class OperatorsNewComponent implements OnInit {
   addLicense() {
     this.licenses.push(
       this.fb.group({
-        certificationNum: [''],
-        certificationType: [''],
-        certificationAgency: [''],
+        licenseNum: [''],
+        licenseType: [''],
+        licenseAgency: [''],
         issueDate: [''],
         expiryDate: [''],
         ratings: this.fb.group({
