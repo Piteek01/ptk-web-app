@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { DashboardMainComponent } from './e404.component';
+import { E404Component } from './e404.component';
 import { IModule } from 'src/app/core/interfaces/imodule.interface';
 import { FeaturesProvider } from 'src/app/core/providers/features.provider';
 import { SideNavService } from 'src/app/core/services/side-nav.service';
@@ -12,13 +12,13 @@ describe('DashboardMainComponent', () => {
     await TestBed.configureTestingModule({
     imports: [
         FeaturesProvider, SideNavService,
-        DashboardMainComponent
+        E404Component
     ]
 }).compileComponents();
   });
 
   it('should create the component', () => {
-    const fixture = TestBed.createComponent(DashboardMainComponent);
+    const fixture = TestBed.createComponent(E404Component);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });

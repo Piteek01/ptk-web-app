@@ -124,7 +124,11 @@ p, h3 {
 
 @mixin make-page-contents() {
   background-color: $page-contents-color;
-  padding: 1em;
+  padding: 2em;
+}
+
+@mixin make-page-wrapper-contents() {
+  background-color: $page-wrapper-contents-color;
 }
 
 @mixin make-page-contents-part2() {

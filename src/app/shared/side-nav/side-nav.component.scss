@@ -7,6 +7,7 @@
   // @include make-small-gutters();
   // z-index: $page-actions-auth;
   z-index: 99;
+  border-right: $border-basic;
 
   &.wide-width {
     width: $navbarWideWidth;

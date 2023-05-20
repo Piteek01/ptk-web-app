@@ -25,10 +25,10 @@ export class OperatorsDetailComponent implements OnInit {
   currentModule!: IModule;
   isChanged = false;
   selectedOperator!: Operator;
-  workflow = {
-    profile: false,
+  operatorTab = {
+    profile: true,
     licenses: false
-  }
+  };
 
   constructor(
     private activatedRoute: ActivatedRoute,

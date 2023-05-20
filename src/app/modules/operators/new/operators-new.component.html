@@ -1,90 +1,125 @@
 <section class="operators">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Library</li>
-    </ol>
-  </nav>
+  <app-breadcrumb-auth></app-breadcrumb-auth>
 
-  <div class="contents">
+  <!-- <div class="contents"> -->
 
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-6 px-0">
+  <div class="row px-2 px-md-0 justify-content-center contents-wrapper">
 
-        <form [formGroup]="operatorForm" (ngSubmit)="onSubmit()">
+    <div class="col-12 col-md-6 px-0 contents">
 
-          <div class="row">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <button ngbNavLink>Profile</button>
+          <ng-template ngbNavContent>
+            <form [formGroup]="operatorProfileForm" (ngSubmit)="onSubmitProfile()">
 
-            <h3 class="col-12 mt-3 px-0">{{'models.operator.name' | translate}}</h3>
-            <div class="col-12 col-md-5 pl-0 pr-2">
-              <label class="mt-2" for="first-name">{{'models.operator.firstName' | translate}}</label>
-              <input id="first-name" type="text" class="form-control" formControlName="firstName" autocomplete="on">
-            </div>
-            <div class="col-6 col-md-2 pl-0 pr-2">
-              <label class="mt-2" for="middle-name">{{'models.operator.middleName' | translate}}</label>
-              <input id="middle-name" type="text" class="form-control" formControlName="middleName" autocomplete="on">
-            </div>
-            <div class="col-12 col-md-5 pl-0 pr-2">
-              <label class="mt-2" for="last-name">{{'models.operator.lastName' | translate}}</label>
-              <input id="last-name" type="text" class="form-control" formControlName="lastName" autocomplete="on">
-            </div>
+              <div class="row">
 
-            <h3 class="col-12 mt-3 px-0">{{'models.operator.address' | translate}}</h3>
+                <h3 class="col-12 mt-3 px-0">{{'models.operator.name' | translate}}</h3>
+                <div class="col-12 col-md-5 pl-0 pr-2">
+                  <label class="mt-2" for="first-name">{{'models.operator.firstName' | translate}}</label>
+                  <input id="first-name" type="text" class="form-control" formControlName="firstName" [readonly]="true" autocomplete="on">
+                </div>
+                <div class="col-6 col-md-2 pl-0 pr-2">
+                  <label class="mt-2" for="middle-name">{{'models.operator.middleName' | translate}}</label>
+                  <input id="middle-name" type="text" class="form-control" formControlName="middleName" autocomplete="on">
+                </div>
+                <div class="col-12 col-md-5 pl-0 pr-2">
+                  <label class="mt-2" for="last-name">{{'models.operator.lastName' | translate}}</label>
+                  <input id="last-name" type="text" class="form-control" formControlName="lastName" autocomplete="on">
+                </div>
 
-            <div class="col-12 px-0" formGroupName="address">
-              <div class="col-12 px-0" >
-                <div class="col-12 col-md-6 pl-0 pr-2">
+                <h3 class="col-12 mt-3 px-0">{{'models.operator.address' | translate}}</h3>
 
-                  <label class="row mt-2" for="street1">{{'models.operator.street1' | translate}}</label>
-                  <input id="street1" type="text" class="form-control row" formControlName="street1" autocomplete="on">
-                  <input id="street2" type="text" class="form-control row mt-2" formControlName="street2">
+                <div class="col-12 px-0" formGroupName="address">
+                  <div class="col-12 px-0" >
+                    <div class="col-12 col-md-6 pl-0 pr-2">
 
-                  <label class="row mt-2" for="city">{{'models.operator.city' | translate}}</label>
-                  <input id="city" type="text" class="form-control" formControlName="city" autocomplete="on">
+                      <label class="row mt-2" for="street1">{{'models.operator.street1' | translate}}</label>
+                      <input id="street1" type="text" class="form-control row" formControlName="street1" autocomplete="on">
+                      <input id="street2" type="text" class="form-control row mt-2" formControlName="street2">
 
-                  <label class="row mt-2" for="country">{{'models.operator.country' | translate}}</label>
-                  <select id="country" class="form-select form-control" formControlName="countryCode" autocomplete="on">
-                    <option value="1" selected>USA</option>
-                  </select>
+                      <label class="row mt-2" for="city">{{'models.operator.city' | translate}}</label>
+                      <input id="city" type="text" class="form-control" formControlName="city" autocomplete="on">
+
+                      <label class="row mt-2" for="country">{{'models.operator.country' | translate}}</label>
+                      <select id="country" class="form-select form-control" formControlName="countryCode" autocomplete="on">
+                        <option value="1" selected>USA</option>
+                      </select>
+
+                    </div>
+                  </div>
+
+                  <div class="row col-12 px-0" >
+                    <div class="col-12 col-md-6 pl-0 pr-2">
+                      <label class="mt-2" for="region">{{'models.operator.region' | translate}}</label>
+                      <select id="region" class="form-select form-control" formControlName="region" autocomplete="on">
+                        <option value="1" selected>California</option>
+                      </select>
+                    </div>
+
+                    <div class="col-12 col-md-6 pl-0 pr-2">
+                      <label class="mt-2" for="postal-code">{{'models.operator.postalCode' | translate}}</label>
+                      <input id="postal-code" type="text" class="form-control" formControlName="postalCode" autocomplete="on">
+                    </div>
+                  </div>
 
                 </div>
+
               </div>
 
-              <div class="row col-12 px-0" >
-                <div class="col-12 col-md-6 pl-0 pr-2">
-                  <label class="mt-2" for="region">{{'models.operator.region' | translate}}</label>
-                  <select id="region" class="form-select form-control" formControlName="region" autocomplete="on">
-                    <option value="1" selected>California</option>
-                  </select>
-                </div>
-
-                <div class="col-12 col-md-6 pl-0 pr-2">
-                  <label class="mt-2" for="postal-code">{{'models.operator.postalCode' | translate}}</label>
-                  <input id="postal-code" type="text" class="form-control" formControlName="postalCode" autocomplete="on">
-                </div>
+              <div class="d-flex justify-content-end my-3">
+                <!-- <button type="button" class="btn mr-1" [disabled]="true">{{'actions.add' | translate}}</button>
+                <button type="button" class="btn mr-1" [disabled]="true">{{'actions.deactivate' | translate}}</button> -->
+                <button type="button" class="btn mr-1" [disabled]="true">{{'actions.cancel' | translate}}</button>
+                <button type="button" class="btn mr-2" (click)="onSubmitProfile()">{{'actions.save' | translate}}</button>
               </div>
 
-            </div>
+              <div class="mt-3">
+                <p>Form Status: {{operatorProfileForm.status}}</p>
+                <!-- <button type="button" class="btn" (click)="onSubmit()" >{{'actions.submit' | translate}}</button> -->
+              </div>
 
-          </div>
+            </form>
+          </ng-template>
+        </li>
 
-          <div class="d-flex justify-content-end my-3">
-            <!-- <button type="button" class="btn mr-1" [disabled]="true">{{'actions.add' | translate}}</button>
-            <button type="button" class="btn mr-1" [disabled]="true">{{'actions.deactivate' | translate}}</button> -->
-            <button type="button" class="btn mr-1" [disabled]="true">{{'actions.cancel' | translate}}</button>
-            <button type="button" class="btn mr-2" (click)="onSubmit()">{{'actions.save' | translate}}</button>
-          </div>
+        <li [ngbNavItem]="2">
+          <button ngbNavLink>Licenses</button>
+          <ng-template ngbNavContent>
+            <p>
+              Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+              farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+              ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
+              helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
+              8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+              stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+            </p>
+          </ng-template>
+        </li>
 
-          <div class="mt-3">
-            <p>Form Status: {{operatorForm.status}}</p>
-            <!-- <button type="button" class="btn" (click)="onSubmit()" >{{'actions.submit' | translate}}</button> -->
-          </div>
+        <li [ngbNavItem]="3">
+          <button ngbNavLink>Account</button>
+          <ng-template ngbNavContent>
+            <p>
+              Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
+              Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
+              Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
+              egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
+              tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
+              magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
+              neque. Phasellus nec tortor vel tellus pulvinar feugiat.
+            </p>
+          </ng-template>
+        </li>
 
-        </form>
+      </ul>
 
-      </div>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
     </div>
-
   </div>
+
+  <!-- </div> -->
 
 </section>

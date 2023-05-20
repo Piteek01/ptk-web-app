@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 
 import { IModulesEnum } from 'src/app/core/enums/imodules.enum';
 import { Operator } from 'src/app/core/interfaces/operator.interface';
+
+import { BreadcrumbAuthComponent } from 'src/app/shared/breadcrumbs/auth/breadcrumb-auth.component';
 import { SideNavComponent } from 'src/app/shared/side-nav/side-nav.component';
 import { HeaderAuthComponent } from 'src/app/shared/headers/auth/header-auth.component';
 import { OperatorService } from 'src/app/core/services/operator.service';
@@ -13,7 +15,8 @@ import { OperatorService } from 'src/app/core/services/operator.service';
 @Component({
   selector: 'app-operators-list',
   standalone: true,
-  imports: [CommonModule, TranslateModule, HeaderAuthComponent, SideNavComponent, RouterLinkActive, RouterLink],
+  imports: [CommonModule, TranslateModule,
+    BreadcrumbAuthComponent, HeaderAuthComponent, SideNavComponent, RouterLinkActive, RouterLink],
   templateUrl: './operators-list.component.html',
   styleUrls: ['../operators.component.scss']
 })

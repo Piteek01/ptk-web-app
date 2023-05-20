@@ -6,6 +6,12 @@ $app-min-width: 420px;
 // Body
 $body-color: tealColors('900');
 
+// Borders
+$border-basic: 1px solid silver;
+
+// Breadcrumb
+$breadcrumb-bg-color: $white;
+
 // Buttons
 $button-bg-color: tealColors('600');
 $button-color: $white;
@@ -42,7 +48,8 @@ $navbarNarrowWidth: 2.8em;
 $navbarWideWidth: 23em;
 
 // Pages
-$page-bk-color: grayColors('200');
+$page-bk-color: $white; // grayColors('100');
+$page-wrapper-contents-color: grayColors('100');
 $page-contents-color: grayColors('100');
 $page-contents-part2-color: $white;
 

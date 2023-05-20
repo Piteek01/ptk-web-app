@@ -12,13 +12,13 @@
     background-color: $page-bk-color;
     height: calc(100vh - #{$header-height});
     margin-top: $header-height;
-    padding-top: .4em;
+    padding-top: 0;
     padding-bottom: 4em;
     position: relative;
     z-index: $main-z-index;
     overflow-y: auto;
 
-    @include make-gutters();
+    // @include make-gutters();
 
     &.wide-width {
       margin-left: $navbarNarrowWidth;
