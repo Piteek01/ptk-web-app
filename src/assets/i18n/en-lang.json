@@ -73,6 +73,7 @@
       "city": "City",
       "country": "Country",
       "firstName": "First name",
+      "middleName": "Middle initial/name",
       "lastName": "Last name",
       "licenses": "Licenses",
       "name": "Name",
@@ -125,7 +126,9 @@
       "list": "Operators",
       "detail": "Detail",
       "edit": "Edit",
-      "new": "New"
+      "licenses": "Licenses",
+      "new": "New",
+      "profile": "Operator Profile"
     },
     "parts": {
       "main": "Parts & Supplies",

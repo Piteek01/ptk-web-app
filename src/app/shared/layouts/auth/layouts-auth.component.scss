@@ -4,16 +4,18 @@
   width: 100vw;
   height: 100vh;
   overflow-x: auto;
+  // position: relative;
   // z-index: $main-z-index;
 
   .contents {
-    min-width: calc(#{$min-width-contents} + 2em);
+    min-width: calc(#{$min-width-contents});
     background-color: $page-bk-color;
     height: calc(100vh - #{$header-height});
     margin-top: $header-height;
     padding-top: .4em;
     padding-bottom: 4em;
-    z-index: 100;
+    position: relative;
+    z-index: $main-z-index;
     overflow-y: auto;
 
     @include make-gutters();

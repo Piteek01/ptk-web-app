@@ -4,6 +4,7 @@ export interface Operator {
   id: string;
   username?: string;
   firstName: string;
+  middleName?: string;
   lastName: string;
   email: string;
   address?: {

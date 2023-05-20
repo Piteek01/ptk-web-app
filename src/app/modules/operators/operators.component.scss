@@ -5,6 +5,11 @@
   height: 100%;
   min-width: $min-width-contents;
 
+  // width: 100vw;
+  // height: 100vh;
+  // overflow-x: auto;
+
+
   .btn {
     @include make-buttons();
     min-width: 5em;
@@ -22,7 +27,7 @@
     @include make-page-contents();
 
     .title{
-      min-width: 150px;
+      min-width: 120px;
     }
 
     .part2 {

@@ -5,7 +5,7 @@
   // top: 0;
   @include make-gutters();
   width: 100vw;
-  min-width: $app-min-width;
+  min-width: $header-min-width;
 
   .header {
     // display: flex;

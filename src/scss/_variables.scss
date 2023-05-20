@@ -1,7 +1,7 @@
 @import 'palette';
 
 // App
-$app-min-width: 275px;
+$app-min-width: 420px;
 
 // Body
 $body-color: tealColors('900');
@@ -12,7 +12,7 @@ $button-color: $white;
 $button-hover-color: tealColors('200');
 
 // Contents
-$min-width-contents: 336px;
+$min-width-contents: 360px;
 
 // Gutters
 $xsmall-gutter: 5px;
@@ -25,6 +25,7 @@ $header-background-color: tealColors('800');
 $header-color: grayColors('100');
 $header-height: 3em;
 $header-link: $white;
+$header-min-width: 360px;
 $header-modal: grayColors('800');
 
 // Links
@@ -49,5 +50,5 @@ $page-contents-part2-color: $white;
 $svg-hover-color: #d2f4ea;
 
 // Z-Indexes
-$main-z-index: 101;
+$main-z-index: 201;
 $page-actions-auth: 201;

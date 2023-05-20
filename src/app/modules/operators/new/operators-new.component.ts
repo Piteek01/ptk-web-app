@@ -28,6 +28,10 @@ export class OperatorsNewComponent implements OnInit {
 
   isChanged = false;
   moduleId = IModulesEnum.operators;
+  operatorTab = {
+    profile: true,
+    licenses: false
+  };
 
   // operatorForm = new FormGroup({
   //   firstName: new FormControl('', Validators.required),
@@ -44,12 +48,13 @@ export class OperatorsNewComponent implements OnInit {
 
   operatorForm = this.fb.group({
     firstName: ['', Validators.required],
+    middleName: [''],
     lastName: ['', Validators.required],
     address: this.fb.group({
       street1: [''],
       street2: [''],
       city: [''],
-      region1: [''],
+      region: [''],
       postalCode: [''],
       countryCode: ['']
     }),

@@ -25,6 +25,10 @@ export class OperatorsDetailComponent implements OnInit {
   currentModule!: IModule;
   isChanged = false;
   selectedOperator!: Operator;
+  workflow = {
+    profile: false,
+    licenses: false
+  }
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -36,7 +40,7 @@ export class OperatorsDetailComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.data.subscribe(data => {
       this.selectedOperator = data['operator'];
-    })
+    });
 
   }
 

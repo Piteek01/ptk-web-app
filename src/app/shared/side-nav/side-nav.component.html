@@ -1,6 +1,6 @@
-<div class="page-nav" [ngClass]="[sideNavStatus == 1 ? 'narrow-width' : 'wide-width']" >
+<div class="side-nav" [ngClass]="[sideNavStatus == 1 ? 'narrow-width' : 'wide-width']" >
   <div *ngIf="sideNavStatus == 1">
-    <a class="btn navbar-a " role="button" (click)="setNavbarWidth()"  aria-controls="Local page actions maximize">
+    <a class="btn navbar-a" role="button" (click)="setNavbarWidth()"  aria-controls="Local page actions maximize">
       <fa-icon [icon]="['fas', 'bars']" class="icon-expanded"></fa-icon>
     </a>
   </div>
