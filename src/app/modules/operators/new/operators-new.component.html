@@ -3,11 +3,11 @@
 
   <!-- <div class="contents"> -->
 
-  <div class="row px-2 px-md-0 justify-content-center contents-wrapper">
+  <!-- <div class="row px-2 px-md-0 justify-content-center contents-wrapper"> -->
 
-    <div class="col-12 col-md-6 px-0 contents">
+    <div class="row col-12 px-0 justify-content-center contents">
 
-      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+      <!-- <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
         <li [ngbNavItem]="1">
           <button ngbNavLink>Profile</button>
           <ng-template ngbNavContent>
@@ -69,16 +69,13 @@
               </div>
 
               <div class="d-flex justify-content-end my-3">
-                <!-- <button type="button" class="btn mr-1" [disabled]="true">{{'actions.add' | translate}}</button>
-                <button type="button" class="btn mr-1" [disabled]="true">{{'actions.deactivate' | translate}}</button> -->
                 <button type="button" class="btn mr-1" [disabled]="true">{{'actions.cancel' | translate}}</button>
                 <button type="button" class="btn mr-2" (click)="onSubmitProfile()">{{'actions.save' | translate}}</button>
               </div>
 
               <div class="mt-3">
                 <p>Form Status: {{operatorProfileForm.status}}</p>
-                <!-- <button type="button" class="btn" (click)="onSubmit()" >{{'actions.submit' | translate}}</button> -->
-              </div>
+                </div>
 
             </form>
           </ng-template>
@@ -113,12 +110,102 @@
           </ng-template>
         </li>
 
-      </ul>
+      </ul> -->
 
-      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+      <!-- <div [ngbNavOutlet]="nav" class="mt-2"></div> -->
+
+      <div class="row col-12 px-0 justify-content-center tab-group">
+        <div class="col-md-6 px-0">
+          <button type="button" (click)="setActiveTab('profile')"
+            [ngClass]="{'btn py-2 px-3 py-md-4 px-md-5 tab-button': true, active: activeTab === 'profile'}">Profile
+          </button>
+
+          <button type="button" (click)="setActiveTab('licenses')"
+            [ngClass]="{'btn py-2 px-3 py-md-4 px-md-5 tab-button ': true, active: activeTab === 'licenses'}">Licenses
+          </button>
+
+          <button type="button" (click)="setActiveTab('account')"
+            [ngClass]="{'btn py-2 px-3 py-md-4 px-md-5 tab-button': true, active: activeTab === 'account'}">Account
+          </button>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 mt-2 mt-md-4 px-2 tab-group-content">
+        <form *ngIf="activeTab==='profile'" [formGroup]="operatorProfileForm" (ngSubmit)="onSubmitProfile()">
+          <div class="row">
+
+            <h3 class="col-12 mt-3 px-0">{{'models.operator.name' | translate}}</h3>
+            <div class="col-12 col-md-5 pl-0 pr-2">
+              <label class="mt-2" for="first-name">{{'models.operator.firstName' | translate}}</label>
+              <input id="first-name" type="text" class="form-control" formControlName="firstName" [readonly]="true" autocomplete="on">
+            </div>
+            <div class="col-6 col-md-2 pl-0 pr-2">
+              <label class="mt-2" for="middle-name">{{'models.operator.middleName' | translate}}</label>
+              <input id="middle-name" type="text" class="form-control" formControlName="middleName" autocomplete="on">
+            </div>
+            <div class="col-12 col-md-5 pl-0 pr-2">
+              <label class="mt-2" for="last-name">{{'models.operator.lastName' | translate}}</label>
+              <input id="last-name" type="text" class="form-control" formControlName="lastName" autocomplete="on">
+            </div>
+
+            <h3 class="col-12 mt-3 px-0">{{'models.operator.address' | translate}}</h3>
+
+            <div class="col-12 px-0" formGroupName="address">
+              <div class="col-12 px-0" >
+                <div class="col-12 col-md-6 pl-0 pr-2">
+
+                  <label class="row mt-2" for="street1">{{'models.operator.street1' | translate}}</label>
+                  <input id="street1" type="text" class="form-control row" formControlName="street1" autocomplete="on">
+                  <input id="street2" type="text" class="form-control row mt-2" formControlName="street2">
+
+                  <label class="row mt-2" for="city">{{'models.operator.city' | translate}}</label>
+                  <input id="city" type="text" class="form-control" formControlName="city" autocomplete="on">
+
+                  <label class="row mt-2" for="country">{{'models.operator.country' | translate}}</label>
+                  <select id="country" class="form-select form-control" formControlName="countryCode" autocomplete="on">
+                    <option value="1" selected>USA</option>
+                  </select>
+
+                </div>
+              </div>
+
+              <div class="row col-12 px-0" >
+                <div class="col-12 col-md-6 pl-0 pr-2">
+                  <label class="mt-2" for="region">{{'models.operator.region' | translate}}</label>
+                  <select id="region" class="form-select form-control" formControlName="region" autocomplete="on">
+                    <option value="1" selected>California</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-md-6 pl-0 pr-2">
+                  <label class="mt-2" for="postal-code">{{'models.operator.postalCode' | translate}}</label>
+                  <input id="postal-code" type="text" class="form-control" formControlName="postalCode" autocomplete="on">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="d-flex justify-content-end my-3">
+            <!-- <button type="button" class="btn mr-1" [disabled]="true">{{'actions.add' | translate}}</button>
+            <button type="button" class="btn mr-1" [disabled]="true">{{'actions.deactivate' | translate}}</button> -->
+            <button type="button" class="btn mr-1" [disabled]="true">{{'actions.cancel' | translate}}</button>
+            <button type="button" class="btn mr-2" (click)="onSubmitProfile()">{{'actions.save' | translate}}</button>
+          </div>
+
+          <div class="mt-3">
+            <p>Form Status: {{operatorProfileForm.status}}</p>
+            <!-- <button type="button" class="btn" (click)="onSubmit()" >{{'actions.submit' | translate}}</button> -->
+          </div>
+
+        </form>
+      </div>
+
+
 
     </div>
-  </div>
+  <!-- </div> -->
 
   <!-- </div> -->
 

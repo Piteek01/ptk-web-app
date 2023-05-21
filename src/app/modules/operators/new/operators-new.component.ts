@@ -32,16 +32,20 @@ export class OperatorsNewComponent implements OnInit {
   isChanged = false;
   moduleId = IModulesEnum.operators;
 
+  activeTab = 'profile';
+
   active = 1;
 
-  activeTab = {
-    profile: true,
-    licenses: false
-  };
-  showTab = {
-    profile: true,
-    licenses: false
-  };
+  // activeTab = {
+  //   profile: true,
+  //   licenses: false,
+  //   account: false
+  // };
+  // showTab = {
+  //   profile: true,
+  //   licenses: false,
+  //   account: false
+  // };
 
   // operatorForm = new FormGroup({
   //   firstName: new FormControl('', Validators.required),
@@ -81,6 +85,10 @@ export class OperatorsNewComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  setActiveTab(tab: string) {
+    this.activeTab = tab;
   }
 
   get licenses(): FormArray {

@@ -27,19 +27,26 @@
     }
   }
 
-  .contents-wrapper {
-    @include make-page-wrapper-contents();
+  // .contents-wrapper {
+  //   @include make-page-wrapper-contents();
 
+  .contents {
+    @include make-page-contents();
 
-    .contents {
-      @include make-page-contents();
+    .tab-group {
+      background-color: $page-contents-color;
+    }
 
-      form {
-        input {
-          @include make-form-controls();
-        }
+    .tab-button {
+      @include make-tabs();
+    }
+
+    form {
+      input {
+        @include make-form-controls();
       }
     }
   }
+  // }
 
 }

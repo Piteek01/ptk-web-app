@@ -123,7 +123,7 @@ p, h3 {
  }
 
 @mixin make-page-contents() {
-  background-color: $page-contents-color;
+  // background-color: $page-contents-color;
   padding: 2em;
 }
 
@@ -170,6 +170,42 @@ p, h3 {
     }
   }
 
+}
+
+// Tabs
+@mixin make-tabs() {
+  position: relative;
+  background-color: transparent;
+  color: $black;
+  border: 2px solid transparent;
+  border-left: none;
+  &:focus {
+    box-shadow: none;
+  }
+  &.active {
+    color: tealColors('700');
+    border-bottom: 2px solid tealColors('600');
+    // font-weight: 600;
+  }
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    background-color: grayColors('500');
+    width: 1px;
+    height: 60%;
+    right: -1px;
+    bottom: .6em;
+  }
+  font-size: 1.1rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.2rem;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 1.3rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 1.4rem;
+  }
 }
 
 // Examples
